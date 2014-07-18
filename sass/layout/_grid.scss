@@ -77,6 +77,10 @@ $bigpad: 2.25rem; // 36px padding - used to separate stacked grid rows in tablet
   margin-right: -1.25rem !important;
 }
 
+.col-1-1-nested {
+  width: 100%;
+  float: left !important;
+}
 .col-1-2-nested {
   width: 50%;
   float: left !important;
