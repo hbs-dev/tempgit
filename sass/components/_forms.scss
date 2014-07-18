@@ -1,0 +1,90 @@
+/* ==========================================================================
+   forms
+   ========================================================================== */
+fieldset{
+	background-color:$bg-grey;
+	border:0;
+	margin-bottom:1.5rem; //24px
+	padding: 1.5rem;//24px
+
+
+	.error-msg {
+		color:$sec-red;
+		font-size:80%;
+		display:none;
+	}
+
+	.req{
+		color:$sec-red;
+		float:right;
+	}
+
+	label{
+		@include fontsizing(.75rem, 1, 0); //12px 12px
+		width:100%;
+		font-family: os600;
+		color: $dark-grey;
+		&.required:after{ 
+			content: " *";
+			color:$sec-red;
+		}
+		@include breakpoint(medium) {
+		 	float:left;
+		 	width:25%;
+		 	text-align:right;
+		 	padding-right: 1.25rem;
+		}
+
+	}
+	
+	div{
+		width:100%;
+		margin-bottom:0.75rem; //12px
+		overflow:hidden;
+		div {
+		 		width:100%;
+		 	}
+		 @include breakpoint(medium) {
+		 	float:left;
+
+		 	div {
+		 		width:50%;
+		 	}
+
+		 }
+	}
+	@include breakpoint(medium) {
+		button{
+			margin-left:25%;
+		}
+	}
+}
+
+input[type="text"], input[type="tel"], input[type="password"],input[type="email"], input[type="url"], textarea, select{
+	outline: none;
+	border:1px solid $light-grey;
+	padding:3px !important;
+	color:$dark-grey;
+	background-color: #fff;
+	width:100%;
+	font-size:.75rem; //12px
+	line-height:1.5; //18px
+	&:focus{
+		border:1px solid $dark-grey;
+	}
+	@include breakpoint(medium) {
+		width:100%;
+	}
+}
+
+
+input[type="checkbox"], input[type="radio"]{
+	vertical-align: top;
+		font-size:.75rem; //12px
+		margin-top:.4rem;
+
+
+}
+
+
+//for submit button styling please see _buttons.scss

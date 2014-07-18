@@ -1,0 +1,136 @@
+/* ==========================================================================
+   typeography
+   ========================================================================== */
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+html,body {
+	font: normal 100%/1.5 os400, sans-serif; //16px/24px
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	background:#fff;
+}
+
+//Working on a 24px baseline - line height and margins calculated relative to current font size
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	margin-top:0;
+	color:$dark-grey;
+	font-weight:normal;
+}
+
+h1, .h1 {
+	@include fontsizing(1.625rem, 1.38461538461538); //26px 36px 24px
+	font-family: os300;
+	text-transform: uppercase;
+	+p.byline{
+		@include fontsizing(65%, 2.4); //10px 24px 24px
+	font-family: os300;
+		margin-top:-1.5rem; //- 24px
+		margin-bottom:1.5rem; //24px
+		color: $dark-grey;
+	}
+}
+
+h2, .h2 {
+	@include fontsizing(1.25rem, 1.2); //20px 24px 
+}
+
+h3, .h3 {
+	@include fontsizing(.875rem, 1.71428571428571); //14px 24px
+}
+
+h4, .h4 {
+	@include fontsizing(.75rem, 2); //12px 24px
+}
+
+p, ul, ol, table { 
+	@include fontsizing(.75rem, 2); //12px 24px
+	margin-top: 0;
+	color:$mid-grey;
+	font-weight:400;
+	b, strong {
+	  font-family: os600;
+	}
+	em {
+		font-family: os400i;
+		font-style: italic;
+	}
+	&.small {
+		font-size:65%;
+	} 
+}
+
+ul ul, ol ol, ul ol, ol ul{
+	margin-bottom:0;
+}
+
+ul {
+	margin-right: 2em; //30px
+	li {
+		margin-bottom:0;
+	}
+}
+
+blockquote {
+	@include fontsizing(.9375rem, 2); //11px 24px
+	margin: 2.5rem 2rem 2.5rem 1rem; //36px 24px 36px 16px
+	background-image: url('/images/quotes.png');
+	background-repeat: no-repeat;
+	padding-left: 4rem; //48px
+	.small {
+	color: $dark-grey;
+	margin-top:-1rem;
+	}
+}
+
+a {	
+	text-decoration:underline;
+	color:$blue-link !important ;
+	&:visited {
+		@extend a
+	}
+	&:hover {
+		color:$dark-grey !important;
+	}
+	&:focus {
+		@extend :hover
+	}
+}
+
+//increase font sizes at 640px
+@include breakpoint(small) {
+
+	h1, .h1 {
+		@include fontsizing(2.5rem, 1.5); //40px 60px
+		+p.byline{
+			font-size:80%;
+		}
+	}
+
+	h2, .h2 {
+		@include fontsizing(1.5rem, 1.5); //24px 36px 
+	}
+
+	h3, .h3 {
+		@include fontsizing(1.1875rem, 1.26315789473684); // 19px 24px
+	}
+
+	h4, .h4 {
+		@include fontsizing(1rem, 1.5); // 16px 24px
+	}
+
+	p, ul, ol, blockquote, table { 
+			@include fontsizing(.9375rem, 1.6); //15px 24px
+
+		&.small {
+			font-size:80%;
+		} 
+	}
+}

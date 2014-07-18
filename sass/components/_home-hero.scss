@@ -1,0 +1,44 @@
+#home-hero {padding-top: 2em;
+	background: #000 url('../images/bg-home-hero.jpg') no-repeat center;background-size: cover;
+	max-height:420px;
+	position: relative;
+	//border-bottom: 39px solid red;
+
+	.inside{
+
+	}
+
+	img{position:relative; right: -200px;bottom:0;z-index:2;}
+
+
+	h1 {
+		color:#fff;
+		font-size: 1.5rem;
+		@include breakpoint(small) {
+			font-size:42px;
+		}
+	}
+
+
+
+
+
+
+
+
+	
+	.grid .col-1-2 {border:1px solid red;
+		
+		margin-bottom: 0;
+		width: 50%;
+		float: left;
+	}
+
+	
+	img {max-width:100%;}
+}
+
+/*@include breakpoint(medium) {
+  .col-1-2{
+  width: 50%;
+  }*/

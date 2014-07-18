@@ -1,0 +1,121 @@
+/* ==========================================================================
+   header
+   ========================================================================== */
+header {position:fixed;top:0;left:0;width:100%;border-bottom: 1px solid #e6e6e6;background:#fff;z-index:4;}
+header h1{margin:11px 0 5px;float:left;}
+header .logo img {width:78px;height:28px;margin-top:-15px}
+
+// min width 640
+@include breakpoint(small){
+	header .logo img {width:86px;height:33px;}
+}
+
+//navigation
+/* bar1 nav */
+.bar1{background:$yellow;position:relative;}
+.bar1 .level2,.bar2 .level2 {display:none;position:relative;}
+.support{font-size: .875rem;line-height:1.86666666666667;color:#e5e5e5;float:left;}
+.support a{color:#e5e5e5;}
+#nav-ad{max-width:140px;max-height:43px;position:relative;top:-10px;float:right;}
+.bar1 .level2 {z-index:4;}
+.bar2 .level2 {z-index:2;}
+.nav1 a:hover,.nav2 a:hover{text-decoration:none}
+.nav1{float:right;list-style: none;margin:0;padding:0;}
+.nav1 li{display:inline;float:left;position:relative;}
+.nav1>li>a:first-child{color:#e5e5e5;font-size: .875rem;line-height:1.86666666666667;padding: 0 1em;border-right:1px solid #666;}
+.nav1>li:last-of-type a{border-right: none}
+.nav1>li:hover{background:$yellow;}
+.nav1>li:hover>a:first-child{border-right:1px solid $yellow;color:#fff;}
+.nav1>li:last-of-type:hover>a{border-right: none}
+.search>a:before,.contact>a:before,.account>a:before,.cart>a:before {font-family:"icons";font-size:1.46666666666667rem;line-height:0;padding-right:5px;position:relative;bottom:-5px;}
+.search>a:before{content: "\e613";}
+.contact>a:before {content: "\e614";}
+.account>a:before {content: "\e615";font-size:1.28571428571429rem;bottom:-4px;}
+.cart>a:before {content: "\e616";}
+    /* bar1 nav 2nd level*/
+.nav1 li:hover .level2 {display:block; background:#fff;position:absolute;top:1.86666666666667;right:0;padding:1.785714285714286em;border-top:5px solid $yellow;width:325px;}
+.nav1 ul {margin:0;padding:0;}
+.nav1 .level2 li:hover {background:none;}
+.nav1 .level2 li {display:block;width:100%;}
+.nav1 .level2 li a {color:$yellow; border-right:none;vertical-align:middle;display:block;line-height:2rem;}
+.nav1 .level2 li a:hover {color:#616161;}
+.level2 h3,.level2 h4{padding-bottom:0;margin-bottom:0;margin-top:0;line-height:1;color:$body-text}
+    /* 2nd level search */
+.search:hover .level2 {left:0;}
+.search input[type="text"]{width:12rem}
+    /* 2nd level contact */
+li.contact:hover .level2{width:240px;}
+.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before,.contact .callback a:before,.contact .visit a:before{font-family:"icons";font-size:1.5rem;padding-right:5px;position:relative;bottom:-6px;}
+.contact .livechat a:before{content: "\e617";}
+.contact .call24 a:before{content: "\e618";}
+.contact .message a:before{content: "\e619";}
+.contact .callback a:before{content: "\e61a";}
+.contact .visit a:before{content: "\e61b";}
+    /* 2nd level account */
+li.account:hover .level2{width:545px;}
+.existing{margin: -1.785714285714286em;padding:1.785714285714286em;}
+.existing h3{color:$yellow;}
+.manage{background:#f4f4f4;margin: -1.785714285714286em;padding:1.785714285714286em;}
+.account p:first-of-type {padding-top:0;margin-top:0;}
+.nav1 li:hover .manage a{border-right:none; color:$yellow}
+.account input[type="text"],.account input[type="password"]{margin-right:1rem;}
+.account input[type="text"]{width:15em;}
+.hide-text {text-indent: 100%;white-space: nowrap;overflow: hidden;}
+    /* 2nd level cart..... to come */
+li.cart:hover .level2{width:325px;}
+li.cart:hover .level2 .cartitem{width:75%; display:inline-block;}
+
+
+/* white bar nav */
+.bar2 {padding-top:1.3125em;position:relative;}
+.bar2 h1{margin:0;}
+.nav2 {
+	list-style:none;
+	margin:0;
+	padding:0;
+	float:left;
+	@include breakpoint(large){
+		.nav2{margin-left:.9375rem;
+	}
+}
+
+}
+
+
+
+.nav2 li{display:inline-block;position:relative;text-transform:uppercase;}
+.nav2 li:hover{background:$yellow;}
+.nav2 a {color:#414141;padding: .9375rem;display:block;font-size:.8125rem;line-height:1;}
+.nav2 li:hover a{color:#fff;}
+    /* white bar nav 2nd level*/
+.nav2 li:hover div>.level2 {display:block;background:#fff;position:absolute; top:43px;border-top:5px solid $yellow;width:30rem;overflow:hidden;padding-top:11px}
+.nav2 li:hover div>.level2.link1,.nav2 li:hover div>div.level2.link2,.nav2 li:hover div>.level2.link3 {left: 0;}
+.nav2 li:hover div>.level2.link4,.nav2 li:hover div>.level2.link5 {right: 0;}
+    /* white bar nav 2nd level columns*/
+.nav2 .one-half li{width:50%;float:left;overflow:hidden;display:block;padding: 2.5em 1.785714285714286em 1.785714285714286em;min-height:40px;}
+.nav2 .one-half li{font-size:.9375rem;display:block;}
+.nav2 .one-half li:hover{background:none;}
+.nav2 li:hover .one-half a{color:$yellow;font-size:.9375rem;margin:0;padding: 0;}
+.nav2 li:hover .one-half a:hover{color:#616161;}
+
+.nav2 .level2 li{display:block;}
+.nav2 li:hover li{padding:0 0 1em;text-transform:none;}
+
+.navtagline{font-size:.8125rem;display:block;}
+.promo {width: 100%;display:block;position:relative;background: #f2f2f2 url("/img/header/bg-promo.gif") repeat-x 0 0;}
+.promo img{float:left;padding-left: 2em;top:-1em;}
+.promo-text{padding:2em;overflow: hidden;display: block;}
+.promo-text p{margin:0;}
+.nav2 li:hover .promo-text a{padding:0;color:$yellow;white-space: none;display:inline-block;font-size:.9375rem;}
+.promo-text a:after{font-family:"icons";content: " \e601";position:relative;bottom:-2px;}
+.nav2 li:hover .promo-text a:hover{color:#616161;}
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 960px){
+  header .logo, .support{margin-left:.9375rem;}
+  #nav-ad, .nav1{margin-right:.9375rem;}
+
+}
