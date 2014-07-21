@@ -34,42 +34,25 @@
 }
 
 
-/*
-//centre a block
+//centre a block item
  %center {
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-
-
-
-//center text 
-%txtcenter { 
-	text-align:center;
-}
-
-//float right 
-%fr { 
-	float:right;
-}
-
-//float left 
-%fl { 
-	float:left;
-}
-
-
-*/
 //display none 
 %hide { 
 	display:none;
 }
-//hr .hr {border-bottom:1px solid #e5e5e5;}
-//display block .block{display:block;}
-//.mt0{margin-top:0;}
-//.mb0{margin-bottom:0;}
-//.mt1{margin-top:1em;}
-//.mb11{margin-bottom:.6875em;}
+
+
+
+
+// show and hide classes for mobile or desktop
+.deskonly{display:none;}
+@include breakpoint(medium) {
+	.mobonly{ display:none;}
+	.deskonly{display:block;}
+}
 

@@ -16,8 +16,12 @@ fieldset{
 
 	.req{
 		color:$sec-red;
-		float:right;
+		text-align:right;
 	}
+	p.required:after{ 
+			content: " *";
+			color:$sec-red;
+		}
 
 	label{
 		@include fontsizing(.75rem, 1, 0); //12px 12px
@@ -36,7 +40,7 @@ fieldset{
 		}
 
 	}
-	
+
 	div{
 		width:100%;
 		margin-bottom:0.75rem; //12px
@@ -79,10 +83,12 @@ input[type="text"], input[type="tel"], input[type="password"],input[type="email"
 
 
 input[type="checkbox"], input[type="radio"]{
-	vertical-align: top;
 		font-size:.75rem; //12px
-		margin-top:.4rem;
-
+		vertical-align:middle;
+		margin-left:1px;
+		@include breakpoint(medium) {
+			vertical-align:top;
+		}
 
 }
 
