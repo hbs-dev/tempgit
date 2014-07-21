@@ -1,6 +1,7 @@
 #home-hero {padding-top: 2em;
-	background: #fff url('../images/home-hero.jpg') no-repeat bottom center;background-size: cover;
-	height:240px;
+	background: #000 url('../images/bg-home-hero.jpg') no-repeat center;background-size: cover;
+	max-height:420px;
+	position: relative;
 	//border-bottom: 39px solid red;
 
 	.inside{
@@ -26,7 +27,11 @@
 
 
 	
-	.grid .col-1-2 {
+	.grid .col-1-2 {border:1px solid red;
+		
+		margin-bottom: 0;
+		width: 50%;
+		float: left;
 	}
 
 	

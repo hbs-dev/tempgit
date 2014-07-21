@@ -10,7 +10,6 @@
 	display: block !important;
 	text-transform: uppercase;
 	font-size: .9375rem !important; //15px
-	background:$yellow;	
 	&:hover{
 		background-color:#ffeb90;
 	}	
@@ -18,6 +17,7 @@
 
 button{
 	@extend %btn;
+	background:$yellow;	
 	text-align:left;
 	display: inline-block !important;
 	&:after {
@@ -29,8 +29,11 @@ button{
 
 .cta{
 	@extend %btn;
+	background:#fff;
 	text-align:center;
-	@include breakpoint(medium) {
+	text-transform: uppercase;
+	@include breakpoint(tiny) {
+		background:$yellow;	
 		text-align:left;
 		display: inline-block !important;
 		&:after {
@@ -40,4 +43,5 @@ button{
 		}
 	}
 }
+
 
