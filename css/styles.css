@@ -977,8 +977,8 @@ table {
 /* KNOWLEDGE BASE PAGES*/
 .gallery-list {
   padding-top: 2rem; }
-  .gallery-list .minheight3 {
-    min-height: 3.5rem; }
+  .gallery-list .minheight-A {
+    min-height: 8rem; }
 
 .knowledge ul {
   list-style-type: none;
