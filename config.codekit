@@ -82,82 +82,41 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/original docs\/Article pages\/Yell_ArticlesPage_v1.png": {
-		"fileType": 32768,
+	"\/knowledge\/article.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 860687,
-		"inputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v1.png",
-		"outputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v1.png",
+		"inputAbbreviatedPath": "\/knowledge\/article.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputPathIsSetByUser": 0
 		},
-	"\/original docs\/Article pages\/Yell_ArticlesPage_v2.png": {
-		"fileType": 32768,
+	"\/knowledge\/contentgrid.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 888807,
-		"inputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v2.png",
-		"outputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v2.png",
+		"inputAbbreviatedPath": "\/knowledge\/contentgrid.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputPathIsSetByUser": 0
 		},
-	"\/original docs\/Article pages\/Yell_ArticlesPage_v3.png": {
-		"fileType": 32768,
+	"\/knowledge\/searchresults.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 890747,
-		"inputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v3.png",
-		"outputAbbreviatedPath": "\/original docs\/Article pages\/Yell_ArticlesPage_v3.png",
+		"inputAbbreviatedPath": "\/knowledge\/searchresults.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputPathIsSetByUser": 0
 		},
-	"\/original docs\/YELL Business HOME\/Yell-Home_v4a.jpg": {
-		"fileType": 16384,
+	"\/knowledge\/video.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 707076,
-		"inputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4a.jpg",
-		"outputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4a.jpg",
+		"inputAbbreviatedPath": "\/knowledge\/video.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/original docs\/YELL Business HOME\/Yell-Home_v4b.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 722010,
-		"inputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4b.jpg",
-		"outputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/original docs\/YELL Business HOME\/Yell-Home_v4bSR_final.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.01449e+06,
-		"inputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4bSR_final.png",
-		"outputAbbreviatedPath": "\/original docs\/YELL Business HOME\/Yell-Home_v4bSR_final.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/original docs\/yell-logo-app-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/original docs\/yell-logo-app-icon.png",
-		"outputAbbreviatedPath": "\/original docs\/yell-logo-app-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/sass\/base\/_breakpoints.scss": {
 		"createSourceMap": 0,
@@ -447,6 +406,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/pages\/_knowledge.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/pages\/_knowledge.scss",
+		"outputAbbreviatedPath": "\/sass\/css\/_knowledge.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/styles.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -484,7 +459,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Victoria Weston",
+"lastSavedByUser": "Marco Faimali",
 "manualImportLinks": {
 	},
 "projectAttributes": {

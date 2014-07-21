@@ -24,12 +24,17 @@
 	video {
 		background-color: #000;
 	}
-  	aside {
-	  	h3	{color: $mid-grey;}
+
+	  	
 
 	    .related-content {
+	    	h3	{color: $mid-grey;}
 	    	float: left;
-	    }
+	    	margin-right: 0.5rem;
+	    	@include breakpoint(medium) {
+    		margin-right: 0;
+  		}
+
 
 	    li {
 	    	@extend %clearfix;
