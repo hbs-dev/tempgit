@@ -1,0 +1,30 @@
+.half-testimonial {
+	background: #fff url('../images/suzi.jpeg') no-repeat center;
+	height:375px;
+	position: relative;
+	margin-bottom:$smallpad;
+	margin-left:-$smallpad;
+	margin-right:-$smallpad;
+	@include breakpoint(medium) {
+		margin-bottom:0;
+		margin-left:0;
+	margin-right:0;
+	}
+	div {
+		background-color:$blue-link;
+		position:absolute;
+		bottom:0;
+		left:0;
+		padding: $smallpad;
+		@include breakpoint(medium) {
+			background-color:transparent;
+		}
+		p{
+			color:#fff;
+			margin-bottom:.75rem;
+		}
+		a {
+		color:#fff !important;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+ul.list-posts {
+ 	list-style: none;
+	padding-left:0;
+	margin-right:0;
+	li {overflow:hidden;
+		margin-bottom:1rem;
+		img {
+			display:none;
+			@include breakpoint(medium) {
+				display:inline-block;
+				width:88px;
+				height:88px;
+				margin-right:1.25rem; //20px
+				float:left;
+			}
+		}		
+		h4{
+			margin-bottom:0;
+		}
+		span{
+			display:block;
+			overflow:hidden;			
+		}
+		p {
+		margin-bottom:0;
+		}
+	}
+}
+
+	
+
+	

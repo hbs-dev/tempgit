@@ -1,39 +1,36 @@
-#home-hero {padding-top: 2em;
-	background: #fff url('../images/home-hero.jpg') no-repeat bottom center;background-size: cover;
-	height:240px;
-	//border-bottom: 39px solid red;
-
-	.inside{
-
-	}
-
-	img{position:relative; right: -200px;bottom:0;z-index:2;}
+#home-hero {
+	border-top: 3px solid $yellow;
+	padding-top: 1rem;
+	background: #fff url('../images/home-hero.jpg') no-repeat 35% bottom;
+	background-size: cover;
+	height:250px;
+	
+	@include breakpoint(medium) {
+		border-top:0;
+		background-position: center bottom;
+		height:400px;
+		}
 
 
 	h1 {
 		color:#fff;
-		font-size: 1.5rem;
+		line-height:1.1;
+		width:60%;
 		@include breakpoint(small) {
-			font-size:42px;
+			width:45%;
+		}
+	}	
+
+	p {
+		display: none;
+		@include breakpoint(medium) {
+			display:block;
+			width:45%;
+			color:#fff;
+			&.h2{
+				color:$yellow;
+			}
 		}
 	}
 
-
-
-
-
-
-
-
-	
-	.grid .col-1-2 {
-	}
-
-	
-	img {max-width:100%;}
 }
-
-/*@include breakpoint(medium) {
-  .col-1-2{
-  width: 50%;
-  }*/
