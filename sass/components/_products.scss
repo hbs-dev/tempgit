@@ -1,5 +1,8 @@
 #products {
-	background: #fff;
+	background: $bg-grey;
+	@include breakpoint(medium) {
+		background: #fff;
+	}
 	img{
 		display:none;
 	}
@@ -13,8 +16,8 @@
 		span{
 			display:block;
 			overflow:hidden;
-			padding-left: 1.125rem; //18px
-			border-left: 2px solid $blue-link;
+			padding-left: 1.1875rem; //19px
+			border-left: 1px solid $blue-link;
 		}
 	}
 
@@ -29,7 +32,7 @@
 	}
 
 	[class*='col-']:last-of-type{
-		border-top:1px solid $bg-grey;
+		border-top:1px solid #ccc;
 		padding-top:$smallpad;
 		@include breakpoint(medium) {
 			border-top:none;
