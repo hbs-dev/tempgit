@@ -743,7 +743,6 @@ button, .cta {
   color: #000 !important;
   padding: .3125rem .625rem !important;
   text-decoration: none !important;
-  border: 1px solid #000 !important;
   display: block !important;
   text-transform: uppercase;
   font-size: .9375rem !important;
@@ -752,6 +751,7 @@ button, .cta {
     background-color: #ffeb90; }
 
 button {
+  border: 1px solid #000 !important;
   text-align: left;
   display: inline-block !important; }
   button:after {
@@ -811,30 +811,38 @@ ul.social {
   display: none !important; }
 
 #home-hero {
-  padding-top: 2em;
-  background: white url("../images/home-hero.jpg") no-repeat bottom center;
+  border-top: 3px solid #fed900;
+  padding-top: 1rem;
+  background: white url("../images/home-hero.jpg") no-repeat 35% bottom;
   background-size: cover;
-  height: 240px; }
-  #home-hero img {
-    position: relative;
-    right: -200px;
-    bottom: 0;
-    z-index: 2; }
+  height: 250px; }
+  @media (min-width: 768px) {
+    #home-hero {
+      border-top: 0;
+      background-position: center bottom;
+      height: 400px; } }
   #home-hero h1 {
     color: #fff;
-    font-size: 1.5rem; }
+    line-height: 1.1;
+    width: 60%; }
     @media (min-width: 640px) {
       #home-hero h1 {
-        font-size: 42px; } }
-  #home-hero img {
-    max-width: 100%; }
+        width: 45%; } }
+  #home-hero p {
+    display: none; }
+    @media (min-width: 768px) {
+      #home-hero p {
+        display: block;
+        width: 45%;
+        color: #fff; }
+        #home-hero p.h2 {
+          color: #fed900; } }
 
-/*@include breakpoint(medium) {
-  .col-1-2{
-  width: 50%;
-  }*/
 #products {
-  background: #fff; }
+  background: #f9f9f9; }
+  @media (min-width: 768px) {
+    #products {
+      background: #fff; } }
   #products img {
     display: none; }
   @media (min-width: 768px) {
@@ -846,8 +854,8 @@ ul.social {
     #products span {
       display: block;
       overflow: hidden;
-      padding-left: 1.125rem;
-      border-left: 2px solid #3399cc; } }
+      padding-left: 1.1875rem;
+      border-left: 1px solid #3399cc; } }
   #products h2 {
     line-height: 1.25;
     margin-bottom: .375rem; }
@@ -855,7 +863,7 @@ ul.social {
     color: #333333;
     margin-bottom: 0; }
   #products [class*='col-']:last-of-type {
-    border-top: 1px solid #f9f9f9;
+    border-top: 1px solid #ccc;
     padding-top: 1.125rem; }
     @media (min-width: 768px) {
       #products [class*='col-']:last-of-type {
@@ -964,15 +972,56 @@ table {
 .twocoll-details img {
   max-width: 100%; }
 
-#customers h2 {
-  font-size: 2.5rem;
-  line-height: 1.5;
-  margin-bottom: 0;
-  font-family: os300;
-  font-weight: 300; }
-#customers p {
-  color: #333333;
-  margin-bottom: 0; }
+ul.list-posts {
+  list-style: none;
+  padding-left: 0;
+  margin-right: 0; }
+  ul.list-posts li {
+    overflow: hidden;
+    margin-bottom: 1rem; }
+    ul.list-posts li img {
+      display: none; }
+      @media (min-width: 768px) {
+        ul.list-posts li img {
+          display: inline-block;
+          width: 88px;
+          height: 88px;
+          margin-right: 1.25rem;
+          float: left; } }
+    ul.list-posts li h4 {
+      margin-bottom: 0; }
+    ul.list-posts li span {
+      display: block;
+      overflow: hidden; }
+    ul.list-posts li p {
+      margin-bottom: 0; }
+
+.half-testimonial {
+  background: white url("../images/suzi.jpeg") no-repeat center;
+  height: 375px;
+  position: relative;
+  margin-bottom: 1.125rem;
+  margin-left: -1.125rem;
+  margin-right: -1.125rem; }
+  @media (min-width: 768px) {
+    .half-testimonial {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0; } }
+  .half-testimonial div {
+    background-color: #3399cc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.125rem; }
+    @media (min-width: 768px) {
+      .half-testimonial div {
+        background-color: transparent; } }
+    .half-testimonial div p {
+      color: #fff;
+      margin-bottom: .75rem; }
+    .half-testimonial div a {
+      color: #fff !important; }
 
 /* KNOWLEDGE BASE PAGES*/
 .gallery-list {
