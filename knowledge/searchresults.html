@@ -16,27 +16,48 @@
   <!--main start-->
   <div class="main knowledge">
     <div class="grid">         
-        <div class="col-1-1">        
-          <h2>Search Results</h2>
-        </div><!--end col-1-1-->
-        <div class="col-1-2">
-            <h3>Knowledge Center (203)</h3>
-        </div><!--end col-1-2-->
-    <div class="col-1-2">
-
-        <div class="site-location most-relevant"> 
-            <!-- Drop down selector box for results sort order -->
-            <div class="selector">
-                <span>Most relevant</span>
-                <select onchange="javascript:setTimeout('__doPostBack(\'ctl00$MainContentPlaceHolder$main_1$ucPageResultsHeader$ddlPageResultsSortOrder\',\'\')', 0)">
-                	<option selected="selected" value="revelant">Most relevant</option>
-                	<option value="recent">Most recent</option>
-                </select>
-            </div><!--end selector-->
-         </div><!--end site-location most-relevant-->
-    </div>
+<div class="landing-search">
+        <div class="col-2-3">
         
-        <div class="col-1-1">
+          <h1>Search</h1>
+            <!--<div class="page-wrapper">-->
+
+                <fieldset class="search-knowledge">
+                    <!--<div onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContentPlaceHolder_main_0_btnSearchKC')"> -->
+  
+                        
+                     <input name="" type="text" id="" placeholder="eg. websites"tabindex="">
+                    <button>Find</button>
+                    <!--</div> -->
+                </fieldset>
+            <!--</div>-->
+        </div><!--end col-2-3-->
+        <div class="col-1-3"></div>
+        <div class="col-1-1"><hr></div>
+                
+        </div><!--end landing-search-->
+        
+
+
+        <div class="col-2-3">        
+          <h2>Search Results</h2>
+          <div class="nesting-parent">
+          <div class="col-1-2-nested">
+            <h3>Knowledge Center (203)</h3>
+          </div>
+          <div class="col-1-2-nested">
+            <div class="site-location most-relevant"> 
+              <!-- Drop down selector box for results sort order -->
+              <div class="selector">
+                  <span>Most relevant</span>
+                  <select onchange="javascript:setTimeout('__doPostBack(\'ctl00$MainContentPlaceHolder$main_1$ucPageResultsHeader$ddlPageResultsSortOrder\',\'\')', 0)">
+                  	<option selected="selected" value="revelant">Most relevant</option>
+                  	<option value="recent">Most recent</option>
+                  </select>
+              </div><!--end selector-->
+           </div><!--end site-location most-relevant-->
+          </div>   
+        </div>
         <ul class="searched-results">
     
         <li>
