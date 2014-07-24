@@ -38,6 +38,15 @@ fieldset{
 		 	text-align:right;
 		 	padding-right: 1.25rem;
 		}
+		
+
+		}
+.w25 label{ //for check boxes and tick boxes - up to 4 on a row
+@include breakpoint(medium) {
+		 	
+		 	width:80%;
+		 	
+		}
 
 	}
 
@@ -45,8 +54,13 @@ fieldset{
 		width:100%;
 		margin-bottom:0.75rem; //12px
 		overflow:hidden;
+
+
+		&.w25{width:25%; }//for check boxes and tick boxes - up to 4 on a row
 		div {
+			
 		 		width:100%;
+
 		 	}
 		 @include breakpoint(medium) {
 		 	float:left;
