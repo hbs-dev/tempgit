@@ -809,7 +809,7 @@ header .nav2ad {
       display: block; }
     .nav2 li:hover span {
       color: #fff; }
-  .nav2 li:hover div > .level2 {
+  .nav2 li:hover > .level2 {
     display: block;
     background: #fff;
     position: absolute;
@@ -1015,7 +1015,7 @@ ul.social {
   @media (min-width: 768px) {
     #home-hero {
       border-top: 0;
-      background-position: center bottom;
+      background: white url("../images/home-hero-circle.jpg") no-repeat 30% bottom;
       height: 400px; } }
   #home-hero h1 {
     color: #fff;
@@ -1029,7 +1029,7 @@ ul.social {
     @media (min-width: 768px) {
       #home-hero p {
         display: block;
-        width: 40%;
+        width: 35%;
         color: #fff; }
         #home-hero p.h2 {
           color: #fed900; } }
