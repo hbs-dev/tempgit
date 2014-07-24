@@ -5,7 +5,7 @@
 @import "base/fonts";
 @import "helpers/helpers";
 @import "layout/typeography";
-//@import "layout/header";
+@import "layout/header";
 @import "layout/footer";
 //@import "components/nojsscript";
 @import "components/buttons";
@@ -19,4 +19,5 @@
 @import "components/twocol-details";
 @import "components/image-list-posts";
 @import "components/testimonials";
+@import "components/full-header";
 @import "pages/knowledge";
