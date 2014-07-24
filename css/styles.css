@@ -1341,7 +1341,7 @@ ul.list-posts {
   padding: 0 3px 0 6px;
   position: relative;
   width: 198px;
-  margin-top: 7px;
+  margin-top: -7px;
   width: 225px; }
   .site-location .selector select {
     top: 0px;
@@ -1363,3 +1363,25 @@ ul.list-posts {
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
+
+.knowledge fieldset {
+  background-color: #fff; }
+
+.search-knowledge {
+  padding: 0; }
+
+.landing-search {
+  display: none; }
+  @media (min-width: 960px) {
+    .landing-search {
+      display: block;
+      width: 100%; }
+      .landing-search fieldset button {
+        margin-left: 0;
+        width: 100px; } }
+
+.landing-search .search-knowledge input[type="text"] {
+  padding: .3125rem .625rem !important;
+  width: 80%;
+  margin-right: 10px;
+  font-size: .9375rem !important; }

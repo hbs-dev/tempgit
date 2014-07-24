@@ -187,7 +187,7 @@
 	padding: 0 3px 0 6px;
 	position: relative;
 	width: 198px;
-	margin-top: 7px;
+	margin-top: -7px;
 	width: 225px;
 
 	select {
@@ -212,6 +212,37 @@
 	-moz-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
+}
+.knowledge fieldset {
+	background-color: #fff;
+}
+
+
+
+.search-knowledge {
+
+		padding:0;
+
+	
+}
+
+.landing-search {
+	display: none;
+	@include breakpoint(large) {
+		display: block;
+		width: 100%;
+		fieldset {
+			button {margin-left: 0; width: 100px;}
+		}
+	}	
+}
+
+.landing-search .search-knowledge input[type="text"] {
+	padding: .3125rem .625rem !important;
+	width: 80%;
+	margin-right: 10px;
+	font-size: .9375rem !important;
+
 }
 
 
