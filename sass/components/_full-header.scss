@@ -1,23 +1,23 @@
-#home-hero {
+
+#full-header {
 	border-top: 3px solid $yellow;
-	padding-top: 1rem;
-	background: #fff url('../images/home-hero.jpg') no-repeat 35% bottom;
+	padding-top: 4rem;
+	background: #fff url('../images/website-packages/hero.jpg') no-repeat center;
 	background-size: cover;
 	height:250px;
-	
+	background-color:$bg-grey;
+	border-bottom:1px solid #ccc;
+	text-align:center;
 	@include breakpoint(medium) {
 		border-top:0;
 		background-position: center bottom;
 		height:400px;
 		}
 
-
-	h1 {
+h1 {
 		color:#fff;
 		line-height:1.1;
-		width:60%;
 		@include breakpoint(small) {
-			width:45%;
 		}
 	}	
 
@@ -25,12 +25,11 @@
 		display: none;
 		@include breakpoint(medium) {
 			display:block;
-			width:40%;
 			color:#fff;
 			&.h2{
 				color:$yellow;
 			}
 		}
-	}
 
+}
 }
