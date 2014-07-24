@@ -499,7 +499,7 @@ th {
   src: url("/fonts/opensans-semibolditalic.woff") format("woff"), url("/fonts/opensans-semibolditalic.ttf") format("truetype"), url("../fonts/opensans-semibolditalic.svg#os600i") format("svg");
   font-weight: 600;
   font-style: italic; }
-.grid:after, .inner:after, ul.social:after, .knowledge .related-content li:after {
+.grid:after, .inner:after, .nav2 .one-half:after, ul.social:after, .knowledge .related-content li:after {
   content: "";
   display: table;
   clear: both; }
@@ -512,13 +512,18 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-#split-header img, .twocoll-details img {
+.nav2 .promo img, #split-header img, .twocoll-details img {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
 footer p.logo, footer h4.live-chat, #split-header img {
   display: none; }
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 .deskonly {
   display: none; }
@@ -650,14 +655,8 @@ a, a:visited {
     p.small, ul.small, ol.small, blockquote.small, table.small {
       font-size: 80%; } }
 /* - - - - - - header begins - - - - - - */
-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
 header a, header a:visited {
   text-decoration: none; }
-header input[type="text"], header input[type="password"] {
-  width: 100px; }
 header .nav2ad {
   max-width: 140px;
   max-height: 43px;
@@ -701,6 +700,8 @@ header .nav2ad {
       width: 325px;
       -webkit-box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.3);
       color: #FFFFFF; }
+    .nav1 li:hover.contact .level2 {
+      width: 230px; }
   .nav1 > li:hover {
     background: #3399cc; }
     .nav1 > li:hover > span:first-child {
@@ -722,6 +723,11 @@ header .nav2ad {
       display: block;
       line-height: 2rem; }
 
+.search input[type="text"] {
+  font-size: .9375rem;
+  padding: .3125rem .625rem !important;
+  margin-bottom: .75rem; }
+
 .search > span:before, .contact > span:before, .account > span:before, .myaccount > span:before {
   font-family: "icons";
   font-size: 1.46666666666667rem;
@@ -740,6 +746,22 @@ header .nav2ad {
   content: "\e615";
   font-size: 1.28571428571429rem;
   bottom: -3px; }
+
+.contact .livechat a:before, .contact .call24 a:before, .contact .message a:before {
+  font-family: "icons";
+  font-size: 1.5rem;
+  padding-right: 5px;
+  position: relative;
+  bottom: -6px; }
+
+.contact .livechat a:before {
+  content: "\e617"; }
+
+.contact .call24 a:before {
+  content: "\e618"; }
+
+.contact .message a:before {
+  content: "\e619"; }
 
 .bar2 {
   padding-top: .75rem;
@@ -765,7 +787,8 @@ header .nav2ad {
     position: relative;
     text-transform: uppercase;
     font-size: .8125rem;
-    line-height: 1; }
+    line-height: 1;
+    font-weight: 400; }
     .nav2 li:hover {
       background: #3399cc; }
     .nav2 li span {
@@ -798,6 +821,16 @@ header .nav2ad {
       padding: .75rem 0 0; }
     .nav2 .one-half li:hover {
       background: none; }
+  .nav2 .promo {
+    width: 100%;
+    display: block;
+    position: relative;
+    background: #f9f9f9;
+    padding: .75rem 1.125rem;
+    margin-top: .75rem;
+    margin-bottom: -1rem; }
+    .nav2 .promo img {
+      max-width: 100%; }
 
 /* - - - - - - header  ends - - - - - - */
 /* ==========================================================================

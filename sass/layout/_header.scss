@@ -1,14 +1,11 @@
 /* - - - - - - header begins - - - - - - */
 header {
   ul{
-    list-style:none;
-    margin:0;
-    padding:0;
+   @extend %nudelist
   }
   a{
     text-decoration:none;
   }
-  input[type="text"],input[type="password"]{width:100px;} //deal with later
   .nav2ad{max-width:140px;max-height:43px;position:relative;top:-10px;float:right;}//advert deal with later
 
 }
@@ -45,7 +42,8 @@ header {
     top:1;right:0;padding:1.785714285714286em;border-top:5px solid #3399CC;width:325px;
 -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
 color:#FFFFFF;}
-  }
+     &:hover.contact .level2 {width:230px;}
+}
   &>li:hover{
     background:$blue-link;
     &>span:first-child{
@@ -76,6 +74,7 @@ color:#FFFFFF;}
 }
 
 //yellow bar nav icons
+.search input[type="text"]{font-size:.9375rem;padding: .3125rem .625rem !important;margin-bottom: .75rem;}
 .search>span:before,.contact>span:before,.account>span:before,.myaccount>span:before {
   font-family:"icons";
   font-size:1.46666666666667rem;
@@ -86,11 +85,11 @@ color:#FFFFFF;}
 }
 .search>span:before{content: "\e613";}
 .contact>span:before {content: "\e614";}
-.account>span:before,.myaccount>span:before {content: "\e615";
-font-size:1.28571428571429rem;
-bottom:-3px;
-}
-
+.account>span:before,.myaccount>span:before {content: "\e615";font-size:1.28571428571429rem;bottom:-3px;}
+.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before{font-family:"icons";font-size:1.5rem;padding-right:5px;position:relative;bottom:-6px;}
+.contact .livechat a:before{content: "\e617";}
+.contact .call24 a:before{content: "\e618";}
+.contact .message a:before{content: "\e619";}
 
 //white main nav bar 
 .bar2 {
@@ -125,6 +124,7 @@ bottom:-3px;
     text-transform:uppercase;
     font-size:.8125rem;
     line-height: 1;
+    font-weight:400;
     &:hover{
       background:$blue-link;
     }
@@ -149,7 +149,7 @@ bottom:-3px;
      padding:1rem 0;
      -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
   }
-
+  .one-half{@extend %clearfix;}
   .one-half li {
     width:50%;
     float:left;
@@ -167,6 +167,24 @@ bottom:-3px;
       background:none;
     }
   }
+
+//second nav promo image
+
+.promo {
+  width: 100%;
+  display:block;
+  position:relative;
+  background:$bg-grey;
+  padding:.75rem 1.125rem;
+  margin-top:.75rem;
+  margin-bottom:-1rem;
+  img{
+    @extend %center;
+    max-width:100%;
+  }
+}
+
+
 }
 
 
