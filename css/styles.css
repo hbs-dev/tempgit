@@ -752,6 +752,9 @@ header .nav2ad {
     margin: 0 2.5rem 0 0;
     float: left;
     line-height: 3.8rem; }
+    .bar2 h1 img {
+      width: 108px;
+      height: 37px; }
 
 .nav2 {
   padding-top: 17px;

@@ -106,6 +106,10 @@ bottom:-3px;
     margin:0 2.5rem 0 0;
     float:left;
     line-height:3.8rem;
+    img {
+          width:108px;
+          height:37px;
+        }
   }
 
 
@@ -121,7 +125,6 @@ bottom:-3px;
     text-transform:uppercase;
     font-size:.8125rem;
     line-height: 1;
-   
     &:hover{
       background:$blue-link;
     }
@@ -129,11 +132,10 @@ bottom:-3px;
       color:$dark-grey;
       padding: .9375rem;
       display:block;
-
     }
-  &:hover span {
-    color:#fff;
-    }
+    &:hover span {
+      color:#fff;
+      }
   }
 
   li:hover div>.level2 {
@@ -145,8 +147,8 @@ bottom:-3px;
      width:30rem;
      overflow:hidden;
      padding:1rem 0;
--webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
-}
+     -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+  }
 
   .one-half li {
     width:50%;
