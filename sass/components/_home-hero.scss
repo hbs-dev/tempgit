@@ -7,9 +7,10 @@
 	
 	@include breakpoint(medium) {
 		border-top:0;
-		background-position: center bottom;
+		background: #fff url('../images/home-hero-circle.jpg') no-repeat 30% bottom;
 		height:400px;
 		}
+
 
 
 	h1 {
@@ -25,7 +26,7 @@
 		display: none;
 		@include breakpoint(medium) {
 			display:block;
-			width:40%;
+			width:35%;
 			color:#fff;
 			&.h2{
 				color:$yellow;
