@@ -213,37 +213,54 @@
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 }
-.knowledge fieldset {
-	background-color: #fff;
-}
 
 
 
-.search-knowledge {
 
-		padding:0;
 
-	
-}
 
-.landing-search {
+.large-search {
 	display: none;
-	@include breakpoint(large) {
-		display: block;
-		width: 100%;
-		fieldset {
-			button {margin-left: 0; width: 100px;}
+	width: 100%;
+	fieldset {
+		background-color: #fff;
+		padding: 0;
+		button {margin-left: 0; width: 100px;}
+		input[type="text"] {
+			padding: .3125rem .625rem !important;
+			width: 80%;
+			margin-right: 10px;
+			font-size: .9375rem !important;
+			@include breakpoint(medium) {
+				width: 70%;	
+			}
 		}
-	}	
+	}
+	&.showfromtiny {
+		@include breakpoint(tiny) {
+			display: block;	
+		}
+	}
+	&.showfromsmall {
+		@include breakpoint(small) {
+			display: block;	
+		}
+	}
+	&.showfrommedium {
+		@include breakpoint(medium) {
+			display: block;	
+		}
+	}
+	&.showfromlarge {
+		@include breakpoint(large) {
+			display: block;	
+		}
+	}
+	
+		
 }
 
-.landing-search .search-knowledge input[type="text"] {
-	padding: .3125rem .625rem !important;
-	width: 80%;
-	margin-right: 10px;
-	font-size: .9375rem !important;
 
-}
 
 
 

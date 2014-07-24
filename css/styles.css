@@ -1180,24 +1180,32 @@ ul.list-posts {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
 
-.knowledge fieldset {
-  background-color: #fff; }
-
-.search-knowledge {
-  padding: 0; }
-
-.landing-search {
-  display: none; }
+.large-search {
+  display: none;
+  width: 100%; }
+  .large-search fieldset {
+    background-color: #fff;
+    padding: 0; }
+    .large-search fieldset button {
+      margin-left: 0;
+      width: 100px; }
+    .large-search fieldset input[type="text"] {
+      padding: .3125rem .625rem !important;
+      width: 80%;
+      margin-right: 10px;
+      font-size: .9375rem !important; }
+      @media (min-width: 768px) {
+        .large-search fieldset input[type="text"] {
+          width: 70%; } }
+  @media (min-width: 480px) {
+    .large-search.showfromtiny {
+      display: block; } }
+  @media (min-width: 640px) {
+    .large-search.showfromsmall {
+      display: block; } }
+  @media (min-width: 768px) {
+    .large-search.showfrommedium {
+      display: block; } }
   @media (min-width: 960px) {
-    .landing-search {
-      display: block;
-      width: 100%; }
-      .landing-search fieldset button {
-        margin-left: 0;
-        width: 100px; } }
-
-.landing-search .search-knowledge input[type="text"] {
-  padding: .3125rem .625rem !important;
-  width: 80%;
-  margin-right: 10px;
-  font-size: .9375rem !important; }
+    .large-search.showfromlarge {
+      display: block; } }
