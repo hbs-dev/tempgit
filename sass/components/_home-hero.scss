@@ -1,14 +1,14 @@
 #home-hero {
-	border-top: 3px solid $yellow;
+	//border-top: 3px solid $yellow;
 	padding-top: 1rem;
 	background: #fff url('../images/home-hero.jpg') no-repeat 35% bottom;
 	background-size: cover;
 	height:250px;
 	
 	@include breakpoint(medium) {
-		border-top:0;
+		//border-top:0;
 		background: #fff url('../images/home-hero-circle.jpg') no-repeat 30% bottom;
-		height:400px;
+		height:489px;
 		}
 
 
