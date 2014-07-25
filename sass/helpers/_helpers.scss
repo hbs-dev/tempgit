@@ -10,6 +10,35 @@
 }
 
 
+//vertical lists with images - set to show image on mobile - set to none to hide image e.g. (100px, 100px, none)
+@mixin imagelists($imgwidth, $imgheight, $imagedisplay :inline-block){
+	@extend %nudelist;
+	li {overflow:hidden;
+		margin-bottom:1rem;
+		img {
+			display:$imagedisplay;// set to inline
+			width: $imgwidth;
+				height:$imgheight;
+				margin-right:1.25rem; //20px
+				float:left;
+				@include breakpoint(medium) {
+				display:inline-block;				
+			}
+		}		
+		h4{
+			margin-bottom:0;
+		}
+		span{
+			display:block;
+			overflow:hidden;			
+		}
+		p {
+		margin-bottom:0;
+		}
+	}
+}
+
+
 
 //PLACEHOLDERS
 
@@ -35,14 +64,14 @@
 
 
 //centre a block item
- %center {
+ %center, .center {
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 //display none 
-%hide { 
+%hide, .hide { 
 	display:none;
 }
 
@@ -53,6 +82,10 @@
 	margin:0;
 }
 
+//center text
+.txtc {
+	text-align: center;
+}
 
 .clear{clear:both;}
 

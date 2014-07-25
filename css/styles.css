@@ -512,18 +512,21 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-.nav2 .promo img, #split-header img, .twocoll-details img {
+.nav2 .promo img, #split-header img, .twocoll-details img, .center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-footer p.logo, footer h4.live-chat, #split-header img {
+footer p.logo, footer h4.live-chat, #split-header img, .hide {
   display: none; }
 
-header ul {
+header ul, ul.list-posts, #website-package ul.list-posts {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+.txtc {
+  text-align: center; }
 
 .clear {
   clear: both; }
@@ -801,7 +804,7 @@ header .nav2ad {
     font-size: .8125rem;
     line-height: 1;
     font-weight: 400; }
-    .nav2 li.hover1 {
+    .nav2 li:hover {
       background: #3399cc; }
     .nav2 li span {
       color: #333333;
@@ -809,7 +812,7 @@ header .nav2ad {
       display: block; }
     .nav2 li:hover span {
       color: #fff; }
-  .nav2 li.hover1 > .level2 {
+  .nav2 li:hover > .level2 {
     display: block;
     background: #fff;
     position: absolute;
@@ -1014,7 +1017,7 @@ ul.social {
   @media (min-width: 768px) {
     #home-hero {
       background: white url("../images/home-hero-circle.jpg") no-repeat 30% bottom;
-      height: 400px; } }
+      height: 489px; } }
   #home-hero h1 {
     color: #fff;
     line-height: 1.1;
@@ -1161,7 +1164,6 @@ table {
     color: #333333;
     margin-bottom: 0; }
   #ctaction h2, #ctaction .h2 {
-    text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 0.75rem; }
@@ -1181,29 +1183,25 @@ table {
 .twocoll-details img {
   max-width: 100%; }
 
-ul.list-posts {
-  list-style: none;
-  padding-left: 0;
-  margin-right: 0; }
-  ul.list-posts li {
-    overflow: hidden;
-    margin-bottom: 1rem; }
-    ul.list-posts li img {
-      display: none; }
-      @media (min-width: 768px) {
-        ul.list-posts li img {
-          display: inline-block;
-          width: 88px;
-          height: 88px;
-          margin-right: 1.25rem;
-          float: left; } }
-    ul.list-posts li h4 {
-      margin-bottom: 0; }
-    ul.list-posts li span {
-      display: block;
-      overflow: hidden; }
-    ul.list-posts li p {
-      margin-bottom: 0; }
+ul.list-posts li {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  ul.list-posts li img {
+    display: none;
+    width: 88px;
+    height: 88px;
+    margin-right: 1.25rem;
+    float: left; }
+    @media (min-width: 768px) {
+      ul.list-posts li img {
+        display: inline-block; } }
+  ul.list-posts li h4 {
+    margin-bottom: 0; }
+  ul.list-posts li span {
+    display: block;
+    overflow: hidden; }
+  ul.list-posts li p {
+    margin-bottom: 0; }
 
 .half-testimonial {
   background: white url("../images/suzi.jpeg") no-repeat center;
@@ -1243,7 +1241,7 @@ ul.list-posts {
   @media (min-width: 768px) {
     #full-header {
       background-position: center bottom;
-      height: 400px; } }
+      height: 489px; } }
   #full-header h1 {
     color: #fff;
     line-height: 1.1; }
@@ -1472,3 +1470,26 @@ ul.list-posts {
   @media (min-width: 960px) {
     .large-search.showfromlarge {
       display: block; } }
+
+#website-package h1 {
+  text-transform: none;
+  margin-bottom: 0; }
+#website-package ul.list-posts li {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  #website-package ul.list-posts li img {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin-right: 1.25rem;
+    float: left; }
+    @media (min-width: 768px) {
+      #website-package ul.list-posts li img {
+        display: inline-block; } }
+  #website-package ul.list-posts li h4 {
+    margin-bottom: 0; }
+  #website-package ul.list-posts li span {
+    display: block;
+    overflow: hidden; }
+  #website-package ul.list-posts li p {
+    margin-bottom: 0; }
