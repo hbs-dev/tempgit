@@ -801,7 +801,7 @@ header .nav2ad {
     font-size: .8125rem;
     line-height: 1;
     font-weight: 400; }
-    .nav2 li:hover {
+    .nav2 li.hover1 {
       background: #3399cc; }
     .nav2 li span {
       color: #333333;
@@ -809,7 +809,7 @@ header .nav2ad {
       display: block; }
     .nav2 li:hover span {
       color: #fff; }
-  .nav2 li:hover > .level2 {
+  .nav2 li.hover1 > .level2 {
     display: block;
     background: #fff;
     position: absolute;
@@ -1007,14 +1007,12 @@ ul.social {
   display: none !important; }
 
 #home-hero {
-  border-top: 3px solid #fed900;
   padding-top: 1rem;
   background: white url("../images/home-hero.jpg") no-repeat 35% bottom;
   background-size: cover;
   height: 250px; }
   @media (min-width: 768px) {
     #home-hero {
-      border-top: 0;
       background: white url("../images/home-hero-circle.jpg") no-repeat 30% bottom;
       height: 400px; } }
   #home-hero h1 {
@@ -1235,7 +1233,6 @@ ul.list-posts {
       color: #fff !important; }
 
 #full-header {
-  border-top: 3px solid #fed900;
   padding-top: 4rem;
   background: white url("../images/website-packages/hero.jpg") no-repeat center;
   background-size: cover;
@@ -1245,7 +1242,6 @@ ul.list-posts {
   text-align: center; }
   @media (min-width: 768px) {
     #full-header {
-      border-top: 0;
       background-position: center bottom;
       height: 400px; } }
   #full-header h1 {

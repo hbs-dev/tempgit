@@ -1,6 +1,6 @@
 
 #full-header {
-	border-top: 3px solid $yellow;
+	//border-top: 3px solid $yellow;
 	padding-top: 4rem;
 	background: #fff url('../images/website-packages/hero.jpg') no-repeat center;
 	background-size: cover;
@@ -9,7 +9,7 @@
 	border-bottom:1px solid #ccc;
 	text-align:center;
 	@include breakpoint(medium) {
-		border-top:0;
+		//border-top:0;
 		background-position: center bottom;
 		height:400px;
 		}
