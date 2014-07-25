@@ -1377,7 +1377,7 @@ ul.list-posts {
     /*zoom: 1;*/
     position: relative; }
 
-.site-location .selector {
+.site-location .selector, .category-navigation .selector {
   background: url("http://business.hibu.com/img/global/custom-dropdown.png") no-repeat scroll 100% 0 #f7f7f7;
   border: 1px solid #ccc;
   color: #8c8c8c;
@@ -1392,11 +1392,12 @@ ul.list-posts {
   width: 198px;
   margin-top: -7px;
   width: 225px; }
-  .site-location .selector select {
+  .site-location .selector select, .category-navigation .selector select {
+    padding: .3125rem .625rem;
+    font-size: .9375rem !important;
     top: 0px;
     right: 0px;
-    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    font-size: 12px;
+    /*font-size: 12px;*/
     border: 0;
     position: absolute;
     opacity: 0;
@@ -1406,6 +1407,35 @@ ul.list-posts {
     background: none;
     cursor: pointer;
     min-width: 100%; }
+
+.category-navigation .selector {
+  margin-top: 0; }
+
+.hiddenblock {
+  display: none; }
+  @media (min-width: 480px) {
+    .hiddenblock.showfromtiny {
+      display: block; } }
+  @media (min-width: 640px) {
+    .hiddenblock.showfromsmall {
+      display: block; } }
+  @media (min-width: 768px) {
+    .hiddenblock.showfrommedium {
+      display: block; } }
+  @media (min-width: 960px) {
+    .hiddenblock.showfromlarge {
+      display: block; } }
+
+.padt20 {
+  padding-top: 20px; }
+
+.centre-column {
+  margin: 0 auto;
+  text-align: center; }
+
+.threemorecontent img {
+  width: 80%;
+  height: auto; }
 
 .site-location .selector.focus, .site-location .selector:focus, .site-location .selector.hover, .site-location .selector:hover, .site-location a.selector:focus, .site-location .selector.active, .site-location .selector:active {
   -webkit-transition: all 0.5s ease-out;

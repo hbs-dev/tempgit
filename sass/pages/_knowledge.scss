@@ -174,7 +174,8 @@
 
 
 
-.site-location .selector {
+
+.site-location .selector, .category-navigation .selector {
 	background: url("http://business.hibu.com/img/global/custom-dropdown.png") no-repeat scroll 100% 0 #f7f7f7;
 	border: 1px solid #ccc;
 	color: #8c8c8c;
@@ -191,10 +192,11 @@
 	width: 225px;
 
 	select {
+		padding: .3125rem .625rem;
+		font-size: .9375rem !important;
 		top: 0px;
 		right: 0px;
-		/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
-		font-size: 12px;
+		/*font-size: 12px;*/
 		border: 0;
 		position: absolute;
 		opacity: 0;
@@ -206,17 +208,54 @@
 		min-width: 100%;
 	}
 }
+.category-navigation .selector {
+	margin-top: 0;
+}
+
+
+.hiddenblock {
+	display: none;
+	&.showfromtiny {
+		@include breakpoint(tiny) {
+			display: block;	
+		}
+	}
+	&.showfromsmall {
+		@include breakpoint(small) {
+			display: block;	
+		}
+	}
+	&.showfrommedium {
+		@include breakpoint(medium) {
+			display: block;	
+		}
+	}
+	&.showfromlarge {
+		@include breakpoint(large) {
+			display: block;	
+		}
+	}
+}
+.padt20 {
+	padding-top: 20px;
+}
+
+.centre-column {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.threemorecontent img {
+	width: 80%;
+	height: auto;	
+}
 
 .site-location .selector.focus, .site-location .selector:focus, .site-location .selector.hover, .site-location .selector:hover, .site-location .selector.active, .site-location .selector:active {
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
-}
-
-
-
-
+} 
 
 
 .large-search {
