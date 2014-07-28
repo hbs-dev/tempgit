@@ -28,7 +28,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	@include fontsizing(1.625rem, 1.38461538461538); //26px 36px 24px
 	font-family: os300;
-	text-transform: uppercase;
 	+p.byline{
 		@include fontsizing(65%, 2.4); //10px 24px 24px
 	font-family: os300;
