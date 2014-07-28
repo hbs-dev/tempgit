@@ -18,10 +18,10 @@
 		img {
 			display:$imagedisplay;// set to inline
 			width: $imgwidth;
-				height:$imgheight;
-				margin-right:1.25rem; //20px
-				float:left;
-				@include breakpoint(medium) {
+			height:$imgheight;
+			margin-right:1.25rem; //20px
+			float:left;
+			@include breakpoint(medium) {
 				display:inline-block;				
 			}
 		}		
@@ -33,7 +33,7 @@
 			overflow:hidden;			
 		}
 		p {
-		margin-bottom:0;
+			margin-bottom:0;
 		}
 	}
 }
@@ -70,6 +70,12 @@
 	margin-right: auto;
 }
 
+//responsive image
+ %responsiveimg {
+	@extend %center;
+	max-width:100%;
+}
+
 //display none 
 %hide, .hide { 
 	display:none;
@@ -87,6 +93,7 @@
 	text-align: center;
 }
 
+//clear row
 .clear{clear:both;}
 
 // show and hide classes for mobile or desktop

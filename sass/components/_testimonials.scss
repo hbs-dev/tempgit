@@ -3,8 +3,8 @@
 	height:375px;
 	position: relative;
 	margin-bottom:$smallpad;
-	margin-left:-$smallpad;
-	margin-right:-$smallpad;
+	margin-left:-1.25rem;
+	margin-right:-1.25rem;
 	@include breakpoint(medium) {
 		margin-bottom:0;
 		margin-left:0;

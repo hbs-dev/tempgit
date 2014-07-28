@@ -6,14 +6,14 @@ header {
   a{
     text-decoration:none;
   }
-  .nav2ad{position:relative;bottom:-10px;float:right;}//advert deal with later
+  .nav2ad{position:relative;bottom:-10px;float:right;}
 }
 
 .inner{max-width:1140px; margin:0 auto;position:relative;@extend %clearfix;
  @include breakpoint(medium) {
     padding-left: 1.25rem; //20px
   padding-right: 1.25rem; //20px
-    }} // may be able to replace this with grid class... see at the end.
+    }} 
 //yellow bar nav
 .bar1{
   background:$yellow;
@@ -137,7 +137,8 @@ color:#FFFFFF;}
     font-size:.8125rem;
     line-height: 1;
     font-weight:400;
-    &:hover{
+   &:hover{
+   // &.hover1 { 
       background:$blue-link;
     }
     span {
@@ -150,7 +151,8 @@ color:#FFFFFF;}
       }
   }
 
-  li:hover>.level2 {
+ li:hover>.level2 {
+  //li.hover1>.level2 {
     display:block;
     background:#fff;
     position:absolute;

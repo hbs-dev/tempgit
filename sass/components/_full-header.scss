@@ -14,7 +14,7 @@
 		height:489px;
 		}
 
-h1 {
+h1 { text-transform:uppercase;
 		color:#fff;
 		line-height:1.1;
 		@include breakpoint(small) {

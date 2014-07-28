@@ -1,8 +1,8 @@
 /* ==========================================================================
    grid
    ========================================================================== */
-$smallpad: 1.125rem; //18px padding - used to separate stacked grid rows in mobile view - can also be used on columns
-$bigpad: 2.25rem; // 36px padding - used to separate stacked grid rows in tablet view - can also be used on columns
+$smallpad: 1.125rem; //18px vertical padding - used to separate stacked grid rows in mobile view - can also be used on columns
+$bigpad: 2.25rem; // 36px vertical padding - used to separate stacked grid rows in tablet view - can also be used on columns
 
 .grid {
   @extend %clearfix;
@@ -23,12 +23,16 @@ $bigpad: 2.25rem; // 36px padding - used to separate stacked grid rows in tablet
   padding-left: 1.25rem; //20px
   padding-right: 1.25rem; //20px
   margin:0;
-  &.padl0 {//optional class to remove left padding on a nested grid column
-    padding-left: 0; 
-  }    
-  &.padr0 {//optional class to remove right padding on a nested grid column
-    padding-right: 0;
-  }  
+    &.padl0 {//optional class to remove left padding on a nested grid column
+      padding-left: 0; 
+    }    
+    &.padr0 {//optional class to remove right padding on a nested grid column
+      padding-right: 0;
+    }  
+    &.padlr0{
+      padding-left:0;
+      padding-right:0;
+    }
   @include breakpoint(medium) {
     float: left;
     position: relative; 
