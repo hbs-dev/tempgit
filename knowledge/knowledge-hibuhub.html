@@ -16,10 +16,10 @@
   <!--main start-->
   <div class="main knowledge">
     <div class="grid">         
-      <section class="large-search showfrommedium">
-        <div class="col-2-3">
+      <div class="col-1-1">
           <h1>Knowledge Center</h1>
-        </div>
+      </div><!--end col-1-1-->
+      <section class="large-search deskonly">
         <div class="col-2-3">
           <fieldset>
                <input name="" type="text" id="" placeholder="eg. websites"tabindex="">
@@ -27,28 +27,41 @@
           </fieldset>
         </div><!--end col-2-3-->
         <div class="col-1-3">
-
           <!--Filter box-->
           <section class="category-navigation">
             <div class="selector">
               <span>Filter</span>
-              <select onchange="javascript:stuff">
-                <option class="hide" value="#" selected="All">All</option> 
-                <option value="/knowledge/articles/display-advertising/">Display Advertising</option> 
-                <option value="/knowledge/articles/ecommerce/">eCommerce</option>                
-                <option value="/knowledge/articles/email-marketing/">Email Marketing</option>   
-                <option value="/knowledge/articles/mobile/">Mobile</option>   
-                <option value="/knowledge/articles/ppc/">PPC</option>   
-                <option value="/knowledge/articles/seo/">SEO</option> 
-                <option value="/knowledge/articles/web-design/">Web Design</option> 
-                <option value="/knowledge/articles/website-content/">Website Content</option> 
-                <option value="/knowledge/articles/websites/">Websites</option>   
+              <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                <option value='' disabled selected style='display:none;'>Please Choose</option>
+                <option value="/knowledge/articles/display-advertising/">Display Advertising (45)</option> 
+                <option value="/knowledge/articles/ecommerce/">eCommerce (12)</option>                
+                <option value="/knowledge/articles/email-marketing/">Email Marketing (3002)</option>   
+                <option value="/knowledge/articles/mobile/">Mobile (1)</option>   
+                <option value="/knowledge/articles/ppc/">PPC (34)</option>   
+                <option value="/knowledge/articles/seo/">SEO (12)</option> 
+                <option value="/knowledge/articles/web-design/">Web Design (0)</option> 
+                <option value="/knowledge/articles/website-content/">Website Content (83)</option> 
+                <option value="/knowledge/articles/websites/">Websites (30)</option>   
               </select>
-            </div>
-          </section>
+            </div><!--end selector-->
+          </section><!--end category-navigation-->
+        </div><!--end col-1-3-->
+      </section><!--end large-search-->
+      <div class="col-1-1 deskonly">
+        <ul class="kbmenu">
+        <div class="twocolumns selected">
+            <li>THE HUB</li>
         </div>
-      </section><!--end landing-search-->
-      <div class="col-1-1">
+        <div class="twocolumns">
+            <li><a href="/knowledge/articles/">ARTICLES</a></li>
+        </div>
+        <div class="twocolumns">
+            <li><a href="/knowledge/videos/">VIDEOS</a></li>
+        </div>
+        <div class="twocolumns">
+            <li><a href="/knowledge/product-tutorials/">GUIDES</a></li>
+        </div>
+    </ul>
         <!--grey sub nav bar-->
       </div>
       <section class="videowithsidebar">
@@ -59,7 +72,7 @@ guides to help. When you&rsquo;re done <a href="/knowledge/videos/">head to our 
 
             
 
-          <div class="inline-video-container">
+          <div class="videocontainer">
             <video class="" id="introvideo" width="100%" height="auto" controls="controls" preload="none" poster="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/videos/2014/march/design1 large.jpg">
               <!-- MP4 source must come first for iOS -->
               <source src='http://business.hibu.co.uk/~/media/Videos/HibuUk/Knowledge%20Center/2014/March/Inspiration/SCRIPT_01_UK%20mp4.mp4'>
@@ -69,13 +82,12 @@ guides to help. When you&rsquo;re done <a href="/knowledge/videos/">head to our 
                 
             
           </div>
-          <!--end inline-video-container-->
+          <!--end videocontainer-->
 
         </div><!--end col-2-3-->
         <div class="col-1-3 centered"> 
-
-            <img class="hiddenblock showfrommedium" width="100%" height="auto" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image1.jpg">
-            <h3 class="padt20">Create an amazing homepage today</h3>
+            <img class="hiddenblock deskonly" width="100%" height="auto" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image1.jpg">
+            <h3 class="padt15">Create an amazing homepage today</h3>
             <p>This month our designers explain how easy it is to get it right so new customers become interested in your site. Clickbelow to read our expert interview and find out how.</p>
             
             <a href="/~/media/files/shared/pdfs/designtipshomepage.pdf" class="cta" id="startediting">Read now<span></span>
@@ -87,89 +99,75 @@ guides to help. When you&rsquo;re done <a href="/knowledge/videos/">head to our 
       </div><!--end grid-->    
       <section class="hubrow">
         <div class="grid">
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column first divider">
-
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image2.jpg">
-                        <h4>Stand out from the crowd</h4>
-                        <p class="stepdescription">With thousands of new websites being created every day, how do you make <br>
-sure yours stands apart from the <br>
-competition?</p>
-                        <div class="minheight2lines">
-                          <a href="http://blog.hibu.com/make-website-stand-crowd/" class="knowledge-cta-text">Read more</a>
-                        </div><!--end minheight2lines-->
-                    </div>
-                    <!--end step-column-->
-                </div>
-            
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column divider">
-
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image3.jpg" alt="I">
-                        <h4>Win the fight for mobile</h4>
-                        <p class="stepdescription">Mobile phone and tablet sales are growing incredibly fast. With tablet ownership doubling in the last year, are you losing out on business?</p>
-                        <div class="minheight2lines">
-                          <a href="http://business.co.uk/knowledge/articles/2014/jan/hibu-uk-mobile-audit/" class="knowledge-cta-text">hibu UK mobile audit</a>
-                        </div><!--end minheight2lines-->
-                    </div>
-                    <!--end step-column-->
-                </div>
-            
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column last divider">
-
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image4.jpg">
-                        <h4>Websites and brand</h4>
-                        <p class="stepdescription">Your company website should have its own personality. So, how should you go about injecting the right personality into your website design?</p>
-                        <div class="minheight2lines">
-                          <a href="http://business.co.uk/knowledge/articles/2011/jan/make-sure-your-website-matches-your-brand-values/" class="knowledge-cta-text">Make sure your website matches your brand values</a>
-                        </div><!--end minheight2lines-->
-                    </div>
-                    <!--end step-column-->
-                </div>
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column first">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image2.jpg">
+                  <h4>Stand out from the crowd</h4>
+                  <p class="stepdescription">With thousands of new websites being created every day, how do you make sure yours stands apart from the competition?</p>
+                  <div class="minheight3">
+                    <a href="http://blog.hibu.com/make-website-stand-crowd/" class="knowledge-cta-text">Read more</a>
+                  </div><!--end minheight3-->
+              </div><!--end step-column first-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
+      
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column divider">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image3.jpg" alt="I">
+                  <h4>Win the fight for mobile</h4>
+                  <p class="stepdescription">Mobile phone and tablet sales are growing incredibly fast. With tablet ownership doubling in the last year, are you losing out on business?</p>
+                  <div class="minheight3">
+                    <a href="http://business.co.uk/knowledge/articles/2014/jan/hibu-uk-mobile-audit/" class="knowledge-cta-text">hibu UK mobile audit</a>
+                  </div><!--end minheight3-->
+              </div><!--end step-column-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
+      
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column last">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image4.jpg">
+                  <h4>Websites and brand</h4>
+                  <p class="stepdescription">Your company website should have its own personality. So, how should you go about injecting the right personality into your website design?</p>
+                  <div class="minheight3">
+                    <a href="http://business.co.uk/knowledge/articles/2011/jan/make-sure-your-website-matches-your-brand-values/" class="knowledge-cta-text">Make sure your website matches your brand values</a>
+                  </div><!--end minheight3-->
+              </div><!--end step-column last-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
         </div><!--end grid-->
-      </section><!--end threemorecontent-->
+      </section><!--end hubrow-->
       <section class="hubrow">
-<div class="grid knowledgegrey">
+        <div class="grid knowledgegrey">
         
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column">
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/hibuuk/bifm/websitelighthouse.jpg">
-                        <h4>Website packages</h4>
-                        <p class="stepdescription">Be seen everywhere with our full digital solution and get the most from your budget.</p>
-                        <a href="http://business.hibu.co.uk/websites" class="knowledge-cta-text">Find out more</a>
-                    </div>
-                    <!--end step-column-->
-                </div>
-                <!--end one-third-step column-->
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/hibuuk/bifm/websitelighthouse.jpg">
+                  <h4>Website packages</h4>
+                  <p class="stepdescription">Be seen everywhere with our full digital solution and get the most from your budget.</p>
+                  <a href="http://business.hibu.co.uk/websites" class="knowledge-cta-text">Find out more</a>
+              </div><!--end step-column-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
+          
 
-            
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column">
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image6.jpg">
-                        <h4>Score your website</h4>
-                        <p class="stepdescription"> Do you know how your website is performing or what needs updating? Request your <strong>FREE</strong> assessment today.</p>
-                        <a href="http://response.hibu.com/ratewebsite" class="knowledge-cta-text">Find out more</a>
-                    </div>
-                    <!--end step-column-->
-                </div>
-                <!--end one-third-step column-->
+      
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image6.jpg">
+                  <h4>Score your website</h4>
+                  <p class="stepdescription"> Do you know how your website is performing or what needs updating? Request your <strong>FREE</strong> assessment today.</p>
+                  <a href="http://response.hibu.com/ratewebsite" class="knowledge-cta-text">Find out more</a>
+              </div><!--end step-column-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
 
-            
-                <div class="col-1-3 padl0 padr0 centre-column">
-                    <div class="step-column">
-                        <img class="showfrommedium" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image7.jpg">
-                        <h4>Twitter takeaways</h4>
-                        <p class="stepdescription">If you found our expert design guides and tips useful, you can easily share them with your followers now.</p>
-                        <a href="http://blog.hibu.com/twitter-design-tips/" class="knowledge-cta-text">Find out more</a>
-                    </div>
-                    <!--end step-column-->
-                </div>
-                <!--end one-third-step column-->
+      
+          <div class="col-1-3 padl0 padr0 centre-column">
+              <div class="step-column">
+                  <img class="deskonly" src="http://business.hibu.co.uk/~/media/images/shared/knowledgecentre/hibuhub/image7.jpg">
+                  <h4>Twitter takeaways</h4>
+                  <p class="stepdescription">If you found our expert design guides and tips useful, you can easily share them with your followers now.</p>
+                  <a href="http://blog.hibu.com/twitter-design-tips/" class="knowledge-cta-text">Find out more</a>
+              </div><!--end step-column-->
+          </div><!--end col-1-3 padl0 padr0 centre-column -->
 
-            
-    </div><!--end grid-->
-      </section><!--end threemorecontent-->
+        </div><!--end grid-->
+      </section><!--end hubrow-->
         
 
 

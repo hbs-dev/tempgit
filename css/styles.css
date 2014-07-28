@@ -512,18 +512,21 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-.nav2 .promo img, #split-header img, .twocoll-details img {
+.nav2 .promo img, #split-header img, .twocoll-details img, .center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-footer p.logo, footer h4.live-chat, #split-header img {
+footer p.logo, footer h4.live-chat, #split-header img, .hide {
   display: none; }
 
-header ul {
+header ul, ul.list-posts, #website-package ul.list-posts {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+.txtc {
+  text-align: center; }
 
 .clear {
   clear: both; }
@@ -1007,16 +1010,14 @@ ul.social {
   display: none !important; }
 
 #home-hero {
-  border-top: 3px solid #fed900;
   padding-top: 1rem;
   background: white url("../images/home-hero.jpg") no-repeat 35% bottom;
   background-size: cover;
   height: 250px; }
   @media (min-width: 768px) {
     #home-hero {
-      border-top: 0;
       background: white url("../images/home-hero-circle.jpg") no-repeat 30% bottom;
-      height: 400px; } }
+      height: 489px; } }
   #home-hero h1 {
     color: #fff;
     line-height: 1.1;
@@ -1163,7 +1164,6 @@ table {
     color: #333333;
     margin-bottom: 0; }
   #ctaction h2, #ctaction .h2 {
-    text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 0.75rem; }
@@ -1183,29 +1183,25 @@ table {
 .twocoll-details img {
   max-width: 100%; }
 
-ul.list-posts {
-  list-style: none;
-  padding-left: 0;
-  margin-right: 0; }
-  ul.list-posts li {
-    overflow: hidden;
-    margin-bottom: 1rem; }
-    ul.list-posts li img {
-      display: none; }
-      @media (min-width: 768px) {
-        ul.list-posts li img {
-          display: inline-block;
-          width: 88px;
-          height: 88px;
-          margin-right: 1.25rem;
-          float: left; } }
-    ul.list-posts li h4 {
-      margin-bottom: 0; }
-    ul.list-posts li span {
-      display: block;
-      overflow: hidden; }
-    ul.list-posts li p {
-      margin-bottom: 0; }
+ul.list-posts li {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  ul.list-posts li img {
+    display: none;
+    width: 88px;
+    height: 88px;
+    margin-right: 1.25rem;
+    float: left; }
+    @media (min-width: 768px) {
+      ul.list-posts li img {
+        display: inline-block; } }
+  ul.list-posts li h4 {
+    margin-bottom: 0; }
+  ul.list-posts li span {
+    display: block;
+    overflow: hidden; }
+  ul.list-posts li p {
+    margin-bottom: 0; }
 
 .half-testimonial {
   background: white url("../images/suzi.jpeg") no-repeat center;
@@ -1235,7 +1231,6 @@ ul.list-posts {
       color: #fff !important; }
 
 #full-header {
-  border-top: 3px solid #fed900;
   padding-top: 4rem;
   background: white url("../images/website-packages/hero.jpg") no-repeat center;
   background-size: cover;
@@ -1245,9 +1240,8 @@ ul.list-posts {
   text-align: center; }
   @media (min-width: 768px) {
     #full-header {
-      border-top: 0;
       background-position: center bottom;
-      height: 400px; } }
+      height: 489px; } }
   #full-header h1 {
     color: #fff;
     line-height: 1.1; }
@@ -1263,8 +1257,6 @@ ul.list-posts {
 /* KNOWLEDGE BASE PAGES*/
 .gallery-list {
   padding-top: 2rem; }
-  .gallery-list .minheight-A {
-    min-height: 8rem; }
 
 .knowledge ul {
   list-style-type: none;
@@ -1315,88 +1307,110 @@ ul.list-posts {
   float: right;
   text-align: center;
   font-size: 14px; }
+  .pagination li {
+    display: inline;
+    float: left;
+    margin-left: 4px; }
+    .pagination li.page-first a {
+      background: url("http://business.hibu.com/img/global/pagination.png") no-repeat 0 0; }
+    .pagination li.page-left a {
+      background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -26px 0; }
+    .pagination li.page-right a {
+      background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -52px 0; }
+    .pagination li.page-last a {
+      background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -78px 0; }
+    .pagination li.page-left a, .pagination li.page-right a, .pagination li.page-extreme a {
+      text-indent: -9999px;
+      -webkit-transition: border 0.2s,box-shadow 0.2s;
+      -moz-transition: border 0.2s,box-shadow 0.2s;
+      -o-transition: border 0.2s,box-shadow 0.2s;
+      transition: border 0.2s,box-shadow 0.2s; }
+    .pagination li.disabled a, .pagination li.disabled a:hover, .pagination li.disabled a:focus {
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      opacity: 0.4;
+      border: 1px solid #b8b8b8 !important;
+      color: #8c8c8c !important;
+      cursor: default; }
+    .pagination li.active a, .pagination li.active a:hover, .pagination li.active a:focus {
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
+      -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
+      -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
+      border: 0;
+      width: 28px;
+      height: 27px;
+      line-height: 27px;
+      background: #2d84dc;
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      cursor: default; }
+    .pagination li a {
+      display: block;
+      width: 28px;
+      height: 27px;
+      line-height: 25px;
+      overflow: hidden;
+      color: #8c8c8c;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid #b8b8b8;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
+      /*zoom: 1;*/
+      position: relative; }
 
-.pagination li {
-  display: inline;
+.twocolumns {
   float: left;
-  margin-left: 4px; }
-  .pagination li.page-first a {
-    background: url("http://business.hibu.com/img/global/pagination.png") no-repeat 0 0; }
-  .pagination li.page-left a {
-    background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -26px 0; }
-  .pagination li.page-right a {
-    background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -52px 0; }
-  .pagination li.page-last a {
-    background: url("http://business.hibu.com/img/global/pagination.png") no-repeat -78px 0; }
-  .pagination li.page-left a, .pagination li.page-right a, .pagination li.page-extreme a {
-    text-indent: -9999px;
-    -webkit-transition: border 0.2s,box-shadow 0.2s;
-    -moz-transition: border 0.2s,box-shadow 0.2s;
-    -o-transition: border 0.2s,box-shadow 0.2s;
-    transition: border 0.2s,box-shadow 0.2s; }
-  .pagination li.disabled a, .pagination li.disabled a:hover, .pagination li.disabled a:focus {
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    opacity: 0.4;
-    border: 1px solid #b8b8b8 !important;
-    color: #8c8c8c !important;
-    cursor: default; }
-  .pagination li.active a, .pagination li.active a:hover, .pagination li.active a:focus {
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
-    -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
-    -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55);
-    border: 0;
-    width: 28px;
-    height: 27px;
-    line-height: 27px;
-    background: #2d84dc;
-    color: #fff;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-    cursor: default; }
-  .pagination li a {
-    display: block;
-    width: 28px;
-    height: 27px;
-    line-height: 25px;
-    overflow: hidden;
-    color: #8c8c8c;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
-    /*zoom: 1;*/
-    position: relative; }
+  width: 106px; }
 
-.site-location .selector, .category-navigation .selector {
+ul.kbmenu {
+  background: #EBEBEB;
+  min-height: 2rem;
+  line-height: 1rem;
+  padding-top: .625rem;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  list-style-type: none;
+  text-align: center;
+  width: 100%; }
+  ul.kbmenu .selected {
+    color: #3399cc;
+    border-bottom: #3399cc;
+    border-bottom-style: solid;
+    height: 27px; }
+  ul.kbmenu a {
+    text-decoration: none; }
+
+.category-navigation .selector {
   background: url("http://business.hibu.com/img/global/custom-dropdown.png") no-repeat scroll 100% 0 #f7f7f7;
   border: 1px solid #ccc;
   color: #8c8c8c;
   cursor: pointer;
   float: left;
-  font-size: 14px;
+  font-size: 16px;
   height: 34px;
   line-height: 34px;
   overflow: hidden;
   padding: 0 3px 0 6px;
   position: relative;
   width: 198px;
-  margin-top: -7px;
+  margin-top: 0;
   width: 225px; }
-  .site-location .selector select, .category-navigation .selector select {
+  .category-navigation .selector select {
     padding: .3125rem .625rem;
     font-size: .9375rem !important;
     top: 0px;
@@ -1411,53 +1425,6 @@ ul.list-posts {
     background: none;
     cursor: pointer;
     min-width: 100%; }
-
-.category-navigation .selector {
-  margin-top: 0; }
-
-p.stepdescription {
-  margin-top: -1.125rem;
-  margin-bottom: .75rem; }
-  @media (min-width: 768px) {
-    p.stepdescription {
-      min-height: 144px;
-      margin-top: 0;
-      margin-bottom: 1.5rem; } }
-  @media (min-width: 960px) {
-    p.stepdescription {
-      min-height: 96px; } }
-
-.showfromtiny {
-  display: none; }
-  @media (min-width: 480px) {
-    .showfromtiny {
-      display: block; } }
-
-.showfromsmall {
-  display: none; }
-  @media (min-width: 640px) {
-    .showfromsmall {
-      display: block; } }
-
-.showfrommedium {
-  display: none; }
-  @media (min-width: 768px) {
-    .showfrommedium {
-      display: block; } }
-
-.showfromlarge {
-  display: none; }
-  @media (min-width: 960px) {
-    .showfromlarge {
-      display: block; } }
-
-.padt20 {
-  padding-top: 20px; }
-
-@media (min-width: 768px) {
-  .centre-column {
-    margin: 0 auto;
-    text-align: center; } }
 
 .hubrow .col-1-3 {
   padding-bottom: 3rem; }
@@ -1475,7 +1442,8 @@ p.stepdescription {
   border-bottom-width: 1px;
   border-top-color: #e0e0e0;
   border-top-style: solid;
-  border-top-width: 2px; }
+  border-top-width: 2px;
+  margin-bottom: 2rem; }
 .hubrow .step-column {
   padding-left: 1.25rem;
   padding-right: 1.25rem; }
@@ -1489,18 +1457,19 @@ p.stepdescription {
     @media (min-width: 768px) {
       .hubrow .step-column.last {
         border-left: 1px #e6e6e6 solid; } }
-
-.minheight2lines {
-  min-height: 3rem; }
-
-.site-location .selector.focus, .site-location .selector:focus, .site-location .selector.hover, .site-location .selector:hover, .site-location a.selector:focus, .site-location .selector.active, .site-location .selector:active {
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
+.hubrow p.stepdescription {
+  margin-top: -1.125rem;
+  margin-bottom: .75rem; }
+  @media (min-width: 768px) {
+    .hubrow p.stepdescription {
+      min-height: 9rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem; } }
+  @media (min-width: 960px) {
+    .hubrow p.stepdescription {
+      min-height: 6rem; } }
 
 .large-search {
-  display: none;
   width: 100%; }
   .large-search fieldset {
     background-color: #fff;
@@ -1517,18 +1486,94 @@ p.stepdescription {
         .large-search fieldset input[type="text"] {
           width: 70%; } }
 
-@media (min-width: 480px) {
-  .showfromtiny {
-    display: block; } }
+.minheight3 {
+  min-height: 3rem; }
 
-@media (min-width: 640px) {
-  .showfromsmall {
-    display: block; } }
+.padt15 {
+  padding-top: 1.5rem; }
 
 @media (min-width: 768px) {
-  .showfrommedium {
-    display: block; } }
+  .centre-column {
+    margin: 0 auto;
+    text-align: center; } }
 
-@media (min-width: 960px) {
-  .showfromlarge {
-    display: block; } }
+/*
+.minheight-A {
+		min-height:8rem;
+	}
+.site-location .selector.focus, .site-location .selector:focus, .site-location .selector.hover, .site-location .selector:hover, .site-location .selector.active, .site-location .selector:active {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+} 
+
+
+.showfromtiny {
+	@include breakpoint(tiny) {
+		display: block;	
+	}
+}
+.showfromsmall {
+	@include breakpoint(small) {
+		display: block;	
+	}
+}
+.showfrommedium {
+	@include breakpoint(medium) {
+		display: block;	
+	}
+}
+.showfromlarge {
+	@include breakpoint(large) {
+		display: block;	
+	}
+}
+
+.showfromtiny {
+	display: none;
+	@include breakpoint(tiny) {
+		display: block;	
+	}
+}
+.showfromsmall {
+	display: none;
+	@include breakpoint(small) {
+		display: block;	
+	}
+}
+.showfrommedium {
+	display: none;
+	@include breakpoint(medium) {
+		display: block;	
+	}
+}
+.showfromlarge {
+	display: none;
+	@include breakpoint(large) {
+		display: block;	
+	}
+}
+*/
+#website-package h1 {
+  text-transform: none;
+  margin-bottom: 0; }
+#website-package ul.list-posts li {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  #website-package ul.list-posts li img {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin-right: 1.25rem;
+    float: left; }
+    @media (min-width: 768px) {
+      #website-package ul.list-posts li img {
+        display: inline-block; } }
+  #website-package ul.list-posts li h4 {
+    margin-bottom: 0; }
+  #website-package ul.list-posts li span {
+    display: block;
+    overflow: hidden; }
+  #website-package ul.list-posts li p {
+    margin-bottom: 0; }
