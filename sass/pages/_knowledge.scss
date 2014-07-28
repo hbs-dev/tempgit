@@ -213,43 +213,103 @@
 }
 
 
-.hiddenblock {
-	display: none;
-	&.showfromtiny {
-		@include breakpoint(tiny) {
-			display: block;	
-		}
+p.stepdescription {
+	margin-top: -1.125rem;
+	margin-bottom: .75rem;
+	@include breakpoint(medium) {
+		min-height: 144px;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
 	}
-	&.showfromsmall {
-		@include breakpoint(small) {
-			display: block;	
-		}
-	}
-	&.showfrommedium {
-		@include breakpoint(medium) {
-			display: block;	
-		}
-	}
-	&.showfromlarge {
-		@include breakpoint(large) {
-			display: block;	
-		}
+	@include breakpoint(large) {
+		min-height: 96px;
 	}
 }
+	
+.showfromtiny {
+	display: none;
+	@include breakpoint(tiny) {
+		display: block;	
+	}
+}
+.showfromsmall {
+	display: none;
+	@include breakpoint(small) {
+		display: block;	
+	}
+}
+.showfrommedium {
+	display: none;
+	@include breakpoint(medium) {
+		display: block;	
+	}
+}
+.showfromlarge {
+	display: none;
+	@include breakpoint(large) {
+		display: block;	
+	}
+}
+
 .padt20 {
 	padding-top: 20px;
 }
 
 .centre-column {
-	margin: 0 auto;
-	text-align: center;
+	@include breakpoint(medium) {
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 
-.threemorecontent img {
-	width: 80%;
-	height: auto;	
+
+//SECTION FOR KNOWLEDGEBASE HUBROW COMPONENT
+.hubrow {
+	.col-1-3 {
+		padding-bottom: 3rem;
+		@include breakpoint(medium) {
+			padding-bottom: 0;
+		}
+	}
+	img {
+		margin: 1rem auto 1rem auto;
+		width: 80%;
+		height: auto;	
+	}
+	.grid.knowledgegrey {
+		background-color: rgb(250, 250, 250);
+		border-bottom-color: rgb(224, 224, 224);
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-top-color: rgb(224, 224, 224);
+		border-top-style: solid;
+		border-top-width: 2px;
+	}
+	.step-column {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	
+	&.first {
+		border-right: 0;
+		@include breakpoint(medium) {
+			border-right: 1px #e6e6e6 solid;
+		}
+	}
+	&.last {
+		border-left: 0;
+		@include breakpoint(medium) {
+			border-left: 1px #e6e6e6 solid;
+		}
+	}
+	}
 }
 
+//END SECTION FOR KNOWLEDGEBASE HUBROW COMPONENT
+
+
+.minheight2lines {
+		min-height: 3rem;
+}
 .site-location .selector.focus, .site-location .selector:focus, .site-location .selector.hover, .site-location .selector:hover, .site-location .selector.active, .site-location .selector:active {
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
@@ -257,47 +317,52 @@
 	transition: all 0.5s ease-out;
 } 
 
-
+//SECTION FOR LARGE SEARCH BAR COMPONENT
 .large-search {
 	display: none;
 	width: 100%;
 	fieldset {
 		background-color: #fff;
 		padding: 0;
-		button {margin-left: 0; width: 100px;}
+		button {
+			margin-left: 0; 
+			width: 6rem;
+		}
 		input[type="text"] {
 			padding: .3125rem .625rem !important;
 			width: 80%;
-			margin-right: 10px;
+			margin-right: 1rem;
 			font-size: .9375rem !important;
 			@include breakpoint(medium) {
 				width: 70%;	
 			}
 		}
 	}
-	&.showfromtiny {
-		@include breakpoint(tiny) {
-			display: block;	
-		}
-	}
-	&.showfromsmall {
-		@include breakpoint(small) {
-			display: block;	
-		}
-	}
-	&.showfrommedium {
-		@include breakpoint(medium) {
-			display: block;	
-		}
-	}
-	&.showfromlarge {
-		@include breakpoint(large) {
-			display: block;	
-		}
-	}
 	
 		
 }
+
+.showfromtiny {
+	@include breakpoint(tiny) {
+		display: block;	
+	}
+}
+.showfromsmall {
+	@include breakpoint(small) {
+		display: block;	
+	}
+}
+.showfrommedium {
+	@include breakpoint(medium) {
+		display: block;	
+	}
+}
+.showfromlarge {
+	@include breakpoint(large) {
+		display: block;	
+	}
+}
+
 
 
 
