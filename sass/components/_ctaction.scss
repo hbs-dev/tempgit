@@ -1,9 +1,14 @@
 .actionbar {
 	background: #fed900;
+	margin-left: 1.25rem; //20px
+  	margin-right: 1.25rem; //20px
+  	@include breakpoint(medium) {
+  		margin-left: 0; 
+  		margin-right: 0; 
+	}
 	p{
 		color:$dark-grey;
 		margin-bottom:0;
-
 	}
 	h2,.h2{
 		//text-transform: uppercase;
