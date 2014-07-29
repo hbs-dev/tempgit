@@ -76,6 +76,10 @@
 	max-width:100%;
 }
 
+.fleximg img { // add this class to html to make all the images within the section responsive
+	@extend %responsiveimg;
+}
+
 //display none 
 %hide, .hide { 
 	display:none;
