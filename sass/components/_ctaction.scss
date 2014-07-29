@@ -11,12 +11,13 @@
 		margin-bottom:0;
 	}
 	h2,.h2{
-		//text-transform: uppercase;
-		@include fontsizing(1.5rem, 1.5, .75rem); //24px 36px  12px
+		@include fontsizing(1.5rem, 1.5, 0); //24px 36px  0
 		@include breakpoint(medium) {
-			@include fontsizing(1.75rem, 1.28571428571429, .75rem); //28px 36px  12px
+			@include fontsizing(1.75rem, 1.28571428571429, 0); //28px 36px  0
 		}
 
 	}
-	
+	h2+p,.h2+p {
+		margin-top:.75rem; //provie margin between paragraph and preceding h2 tag
+	}	
 }

@@ -546,7 +546,7 @@ header ul, ul.list-posts {
 
   .deskonly {
     display: block; } }
-/* ==========================================================================
+	/* ==========================================================================
    typeography
    ========================================================================== */
 *, *:after, *:before {
@@ -639,7 +639,7 @@ a, a:visited {
 @media (min-width: 640px) {
   h1, .h1 {
     font-size: 2.5rem;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     h1 + p.byline, .h1 + p.byline {
       font-size: 80%; }
@@ -1133,12 +1133,14 @@ table {
   .actionbar h2, .actionbar .h2 {
     font-size: 1.5rem;
     line-height: 1.5;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0; }
     @media (min-width: 768px) {
       .actionbar h2, .actionbar .h2 {
         font-size: 1.75rem;
         line-height: 1.28571;
-        margin-bottom: 0.75rem; } }
+        margin-bottom: 0; } }
+  .actionbar h2 + p, .actionbar .h2 + p {
+    margin-top: .75rem; }
 
 #split-header {
   background-color: #f9f9f9;
@@ -1195,6 +1197,31 @@ ul.list-posts li {
       margin-bottom: .75rem; }
     .half-testimonial div a {
       color: #fff !important; }
+
+.full-testimonial {
+  background: white url("../images/website-packages/suzi-full.jpg") no-repeat 30% -20%;
+  height: 500px;
+  position: relative; }
+  @media (min-width: 768px) {
+    .full-testimonial {
+      background-position: center;
+      height: 350px; } }
+  .full-testimonial .ft-words {
+    background-color: #3399cc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.125rem; }
+    .full-testimonial .ft-words p {
+      color: #fff; }
+    @media (min-width: 768px) {
+      .full-testimonial .ft-words {
+        position: relative;
+        background-color: transparent;
+        margin: 1rem 0 0 40%; } }
+    @media (min-width: 960px) {
+      .full-testimonial .ft-words {
+        margin: 2rem 0 0 40%; } }
 
 #full-header {
   padding-top: 4rem;
@@ -1547,6 +1574,8 @@ ul.kbmenu {
       text-align: center; } }
 .showcase .devices {
   clear: both; }
+  .showcase .devices + p {
+    margin-bottom: 0; }
 
 .gallery .col-1-5 {
   width: 50%;
