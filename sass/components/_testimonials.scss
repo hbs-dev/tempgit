@@ -8,7 +8,7 @@
 	@include breakpoint(medium) {
 		margin-bottom:0;
 		margin-left:0;
-	margin-right:0;
+		margin-right:0;
 	}
 	div {
 		background-color:$blue-link;
@@ -27,4 +27,36 @@
 		color:#fff !important;
 		}
 	}
+}
+
+.full-testimonial {
+	background: #fff url('../images/website-packages/suzi-full.jpg') no-repeat 30% -20%;
+	height:500px;
+	position: relative;
+	@include breakpoint(medium) {
+		background-position: center;
+		height:350px;
+	}
+	.ft-words {
+		background-color:$blue-link;
+		position:absolute;
+		bottom:0;
+		left:0;
+		padding: $smallpad;
+		p{
+			color:#fff;
+		}
+	@include breakpoint(medium) {
+		position:relative;
+		background-color:transparent;
+		margin: 1rem 0 0 40%;
+		}
+	@include breakpoint(large) {
+		margin: 2rem 0 0 40%;
+		}
+	}
+	
+
+
+
 }

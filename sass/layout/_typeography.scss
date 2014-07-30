@@ -1,4 +1,4 @@
-/* ==========================================================================
+	/* ==========================================================================
    typeography
    ========================================================================== */
 
@@ -30,7 +30,7 @@ h1, .h1 {
 	font-family: os300;
 	+p.byline{
 		@include fontsizing(65%, 2.4); //10px 24px 24px
-	font-family: os300;
+		font-family: os300;
 		margin-top:-1.5rem; //- 24px
 		margin-bottom:1.5rem; //24px
 		color: $dark-grey;
@@ -108,7 +108,7 @@ a {
 @include breakpoint(small) {
 
 	h1, .h1 {
-		@include fontsizing(2.5rem, 1.5); //40px 60px
+		@include fontsizing(2.5rem, 1.2); //40px 48px
 		+p.byline{
 			font-size:80%;
 		}
