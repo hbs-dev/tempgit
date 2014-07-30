@@ -531,7 +531,7 @@ header ul, ul.list-posts {
   padding: 0;
   margin: 0; }
 
-.txtc {
+.oops, .txtc {
   text-align: center; }
 
 .clear {
@@ -943,7 +943,7 @@ footer {
 /* ==========================================================================
    buttons
    ========================================================================== */
-button, .cta {
+button, a.cta {
   color: #000 !important;
   padding: .3125rem .625rem !important;
   text-decoration: none !important;
@@ -951,7 +951,7 @@ button, .cta {
   text-transform: uppercase;
   font-size: .9375rem !important;
   background: #fed900; }
-  a.cta:focus, button:hover, .cta:hover {
+  a.cta:focus, button:hover, a.cta:hover {
     background-color: #ffeb90; }
 
 button {
@@ -965,13 +965,13 @@ button {
     content: "\e609";
     margin: 0 0 0 1rem !important; }
 
-.cta {
+a.cta {
   text-align: center; }
   @media (min-width: 768px) {
-    .cta {
+    a.cta {
       text-align: left;
       display: inline-block !important; }
-      .cta:after {
+      a.cta:after {
         font-family: icons;
         content: "\e609";
         margin: 0 0 0 1rem !important; } }
@@ -1648,3 +1648,9 @@ ul.kbmenu {
         color: #fff; }
         #home-hero p.h2 {
           color: #fed900; } }
+
+.oops h1 {
+  font-size: 6rem; }
+  @media (min-width: 640px) {
+    .oops h1 {
+      font-size: 10rem; } }

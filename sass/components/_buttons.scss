@@ -30,7 +30,7 @@ button{
 	}
 }
 
-.cta{
+a.cta{
 	@extend %btn;
 	text-align:center;
 	@include breakpoint(medium) {

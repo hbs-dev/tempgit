@@ -1,0 +1,10 @@
+.oops{
+	@extend %txtc;
+	h1 {
+		font-size: 6rem;
+		@include breakpoint(small) {
+			font-size: 10rem;
+		}
+	}
+
+}
