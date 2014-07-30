@@ -1,0 +1,16 @@
+.printdownload{
+	margin-left: 1.25rem;
+	float:right;
+	a.print, a.download {
+		@extend %offscreen;
+		background: #fff url('../images/print.svg') no-repeat;
+		background-size: 36px 36px;
+		width:36px;
+		height:36px;
+		display:inline-block;
+	}
+	a.download{
+		background-image: url('../images/download.svg');
+		margin-left: 1.25rem;
+	}
+}
