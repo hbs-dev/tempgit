@@ -1659,6 +1659,10 @@ ul.kbmenu {
         color: #fff; }
         #home-hero p.h2 {
           color: #fed900; } }
+    #home-hero p a {
+      color: #fed900 !important; }
+      #home-hero p a:hover, #home-hero p a:focus {
+        color: #ffeb90 !important; }
 
 .oops h1 {
   font-size: 6rem; }
