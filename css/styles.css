@@ -687,9 +687,10 @@ header .nav2ad {
   position: relative;
   line-height: 1.5; }
   .bar1 p.support {
-    color: #333333;
     float: left;
     margin-bottom: 0; }
+    .bar1 p.support a {
+      color: #333333 !important; }
   .bar1 .level2 {
     z-index: 4;
     display: none;
@@ -738,28 +739,20 @@ header .nav2ad {
 
 .search input[type="text"] {
   font-size: .9375rem;
-  padding: .3125rem .625rem !important;
+  padding: .375rem .625rem !important;
   margin-bottom: .75rem; }
 
-.search > span:before, .contact > span:before, .account > span:before, .myaccount > span:before {
-  font-family: "icons";
-  font-size: 1.46666666666667rem;
-  line-height: 0;
-  padding-right: 5px;
-  position: relative;
-  bottom: -4px; }
-
-.search > span:before {
-  content: "\e613"; }
-
-.contact > span:before {
-  content: "\e614"; }
-
-.account > span:before, .myaccount > span:before {
-  content: "\e615";
-  font-size: 1.28571428571429rem;
-  bottom: -3px; }
-
+/*.search>span:before,.contact>span:before,.account>span:before,.myaccount>span:before {
+  font-family:"icons";
+  font-size:1.46666666666667rem;
+  line-height:0;
+  padding-right:5px;
+  position:relative;
+  bottom:-4px;
+}
+.search>span:before{content: "\e613";}
+.contact>span:before {content: "\e614";}
+.account>span:before,.myaccount>span:before {content: "\e615";font-size:1.28571428571429rem;bottom:-3px;}*/
 .contact .livechat a:before, .contact .call24 a:before, .contact .message a:before {
   font-family: "icons";
   font-size: 1.5rem;
@@ -812,7 +805,7 @@ header .nav2ad {
     .nav2 li:hover {
       background: #3399cc; }
     .nav2 li span {
-      color: #333333;
+      color: #3399cc;
       padding: .9375rem;
       display: block; }
     .nav2 li:hover span {
@@ -1172,7 +1165,7 @@ ul.list-posts li {
     margin-bottom: 0; }
 
 .half-testimonial {
-  background: white url("../images/suzi.jpeg") no-repeat center;
+  background: #f9f9f9 url("../images/suzi.jpeg") no-repeat center;
   height: 375px;
   position: relative;
   margin-bottom: 1.125rem;
@@ -1188,6 +1181,7 @@ ul.list-posts li {
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
     padding: 1.125rem; }
     @media (min-width: 768px) {
       .half-testimonial div {

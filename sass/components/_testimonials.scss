@@ -1,5 +1,5 @@
 .half-testimonial {
-	background: #fff url('../images/suzi.jpeg') no-repeat center;
+	background: $bg-grey url('../images/suzi.jpeg') no-repeat center;
 	height:375px;
 	position: relative;
 	margin-bottom:$smallpad;
@@ -15,6 +15,7 @@
 		position:absolute;
 		bottom:0;
 		left:0;
+		right:0;
 		padding: $smallpad;
 		@include breakpoint(medium) {
 			background-color:transparent;
