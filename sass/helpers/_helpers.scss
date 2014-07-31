@@ -72,12 +72,12 @@
 
 //responsive image
  %responsiveimg {
-	@extend %center;
 	max-width:100%;
 }
 
-.fleximg img { // add this class to html to make all the images within the section responsive
+%fleximg, .fleximg img { // add this class to html to make all the images within the section responsive and centred
 	@extend %responsiveimg;
+	@extend %center;
 }
 
 //display none 
@@ -93,7 +93,7 @@
 }
 
 //center text
-.txtc {
+%txtc, .txtc {
 	text-align: center;
 }
 

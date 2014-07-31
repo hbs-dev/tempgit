@@ -31,7 +31,15 @@
 			&.h2{
 				color:$yellow;
 			}
+
 		}
+	a {
+		color:$yellow !important;
+		&:hover {
+			color:#ffeb90 !important;
+			}
+		}
+
 	}
 
 }
