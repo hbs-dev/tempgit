@@ -515,12 +515,12 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-.fleximg img, .gallery .col-1-5 img, .nav2 .promo img, #split-header img, .center {
+.gallery .col-1-5 img, .fleximg img, .nav2 .promo img, #split-header img, .center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.fleximg img, .gallery .col-1-5 img {
+.gallery .col-1-5 img, .fleximg img {
   max-width: 100%; }
 
 footer p.logo, footer h4.live-chat, #split-header img, .hide {
