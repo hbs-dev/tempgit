@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Yell">
+	<title>Yell</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<!--header start-->
+	<header></header>
+	<style>
+	.hidden .answer {display: none;}
+	.hidden .content {display: none;}
+	.show .answer {display: block;}
+	</style>
+	<!--header end-->
+	<!--main start-->
+	<section class="unresponsiveoverlay"><p>For the best possible experience we recommend viewing this section of the site on a desktop or laptop computer.</p></section>
+	<div class="main knowledge">
+		<div id="top1" class="expandable toplevel hidden" onclick="switchstates(this);">
+			<h1>This is the top level</h1>
+			<div class="content" style="background-color:#555;">
+			<div id="a1" class="expandable hidden" onclick="switchstates(this);">
+				<h1>Hello this is question 1</h1>
+				<div class="answer">
+					blah blah this is the answer
+				</div>
+			</div>
+			<div id="a2"  class="expandable hidden" onclick="switchstates(this);">
+				<h1>Hello this is question 2</h1>
+				<div class="answer">
+					blah blah this is the answer
+				</div>
+			</div>
+			<div id="a3"  class="expandable hidden" onclick="switchstates(this);">
+				<h1>Hello this is question 3</h1>
+				<div class="answer">
+					blah blah this is the answer
+				</div>
+			</div>
+		</div>
+		</div>
+	</div><!--end main knowledge-->
+	<!--footer end-->
+	<!--scripts start-->
+	<script>
+	function switchstates(e) {
+		console.log("switchstates running");
+		console.log(e.className);
+		console.log(e.id);
+		document.querySelector('#'+e.id).classList.toggle('hidden');
+		window.event.stopPropagation();
+	}
+	</script>
+	<!--scripts end-->
+</body>
+</html>

@@ -467,6 +467,25 @@ th {
       width: 33.3333%;
       float: left !important; } }
 
+.col-3-to-2 {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .col-3-to-2 {
+      width: 50%; } }
+  @media (min-width: 960px) {
+    .col-3-to-2 {
+      width: 33.3333%; } }
+
+.col-3-to-2-hider {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .col-3-to-2-hider {
+      display: none; } }
+  @media (min-width: 960px) {
+    .col-3-to-2-hider {
+      display: block;
+      width: 33.3333%; } }
+
 @font-face {
   font-family: "icons";
   src: url("/fonts/icons.woff") format("woff"), url("/fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
@@ -507,7 +526,7 @@ th {
   display: table;
   clear: both; }
 
-.social-icon {
+.social-icon, .printdownload a.print, .printdownload a.download {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden; }
@@ -515,12 +534,12 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-.fleximg img, .gallery .col-1-5 img, .nav2 .promo img, #split-header img, .center {
+.gallery .col-1-5 img, .fleximg img, .nav2 .promo img, #split-header img, .center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.fleximg img, .gallery .col-1-5 img {
+.gallery .col-1-5 img, .fleximg img, .responsiveimg img {
   max-width: 100%; }
 
 footer p.logo, footer h4.live-chat, #split-header img, .hide {
@@ -531,7 +550,7 @@ header ul, ul.list-posts {
   padding: 0;
   margin: 0; }
 
-.txtc {
+.oops, .txtc {
   text-align: center; }
 
 .clear {
@@ -546,6 +565,12 @@ header ul, ul.list-posts {
 
   .deskonly {
     display: block; } }
+.largedeskonly {
+  display: none; }
+  @media (min-width: 960px) {
+    .largedeskonly {
+      display: block; } }
+
 	/* ==========================================================================
    typeography
    ========================================================================== */
@@ -687,9 +712,10 @@ header .nav2ad {
   position: relative;
   line-height: 1.5; }
   .bar1 p.support {
-    color: #333333;
     float: left;
     margin-bottom: 0; }
+    .bar1 p.support a {
+      color: #333333 !important; }
   .bar1 .level2 {
     z-index: 4;
     display: none;
@@ -738,28 +764,20 @@ header .nav2ad {
 
 .search input[type="text"] {
   font-size: .9375rem;
-  padding: .3125rem .625rem !important;
+  padding: .375rem .625rem !important;
   margin-bottom: .75rem; }
 
-.search > span:before, .contact > span:before, .account > span:before, .myaccount > span:before {
-  font-family: "icons";
-  font-size: 1.46666666666667rem;
-  line-height: 0;
-  padding-right: 5px;
-  position: relative;
-  bottom: -4px; }
-
-.search > span:before {
-  content: "\e613"; }
-
-.contact > span:before {
-  content: "\e614"; }
-
-.account > span:before, .myaccount > span:before {
-  content: "\e615";
-  font-size: 1.28571428571429rem;
-  bottom: -3px; }
-
+/*.search>span:before,.contact>span:before,.account>span:before,.myaccount>span:before {
+  font-family:"icons";
+  font-size:1.46666666666667rem;
+  line-height:0;
+  padding-right:5px;
+  position:relative;
+  bottom:-4px;
+}
+.search>span:before{content: "\e613";}
+.contact>span:before {content: "\e614";}
+.account>span:before,.myaccount>span:before {content: "\e615";font-size:1.28571428571429rem;bottom:-3px;}*/
 .contact .livechat a:before, .contact .call24 a:before, .contact .message a:before {
   font-family: "icons";
   font-size: 1.5rem;
@@ -812,7 +830,7 @@ header .nav2ad {
     .nav2 li:hover {
       background: #3399cc; }
     .nav2 li span {
-      color: #333333;
+      color: #3399cc;
       padding: .9375rem;
       display: block; }
     .nav2 li:hover span {
@@ -943,7 +961,7 @@ footer {
 /* ==========================================================================
    buttons
    ========================================================================== */
-button, .cta {
+button, a.cta {
   color: #000 !important;
   padding: .3125rem .625rem !important;
   text-decoration: none !important;
@@ -951,7 +969,7 @@ button, .cta {
   text-transform: uppercase;
   font-size: .9375rem !important;
   background: #fed900; }
-  a.cta:focus, button:hover, .cta:hover {
+  a.cta:focus, button:hover, a.cta:hover {
     background-color: #ffeb90; }
 
 button {
@@ -965,13 +983,13 @@ button {
     content: "\e609";
     margin: 0 0 0 1rem !important; }
 
-.cta {
+a.cta {
   text-align: center; }
   @media (min-width: 768px) {
-    .cta {
+    a.cta {
       text-align: left;
       display: inline-block !important; }
-      .cta:after {
+      a.cta:after {
         font-family: icons;
         content: "\e609";
         margin: 0 0 0 1rem !important; } }
@@ -1172,7 +1190,7 @@ ul.list-posts li {
     margin-bottom: 0; }
 
 .half-testimonial {
-  background: white url("../images/suzi.jpeg") no-repeat center;
+  background: #f9f9f9 url("../images/suzi.jpeg") no-repeat center;
   height: 375px;
   position: relative;
   margin-bottom: 1.125rem;
@@ -1188,6 +1206,7 @@ ul.list-posts li {
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
     padding: 1.125rem; }
     @media (min-width: 768px) {
       .half-testimonial div {
@@ -1250,11 +1269,8 @@ ul.list-posts li {
 
 .unresponsiveoverlay {
   background: #fed900;
-  width: auto;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem; }
+  display: block;
+  padding: 2rem 1.25rem 1rem; }
   .unresponsiveoverlay p {
     font-size: 1.5rem; }
   @media (min-width: 768px) {
@@ -1662,3 +1678,26 @@ ul.kbmenu {
         color: #fff; }
         #home-hero p.h2 {
           color: #fed900; } }
+    #home-hero p a {
+      color: #fed900 !important; }
+      #home-hero p a:hover, #home-hero p a:focus {
+        color: #ffeb90 !important; }
+
+.oops h1 {
+  font-size: 6rem; }
+  @media (min-width: 640px) {
+    .oops h1 {
+      font-size: 10rem; } }
+
+.printdownload {
+  margin-left: 1.25rem;
+  float: right; }
+  .printdownload a.print, .printdownload a.download {
+    background: white url("../images/print.svg") no-repeat;
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+    display: inline-block; }
+  .printdownload a.download {
+    background-image: url("../images/download.svg");
+    margin-left: 1.25rem; }

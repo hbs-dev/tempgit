@@ -14,22 +14,17 @@
 	<header></header>
 	<!--header end-->
 	<!--main start-->
-	<style>
-	#videoPlayer {
-		width:100%;
-		height: auto;
-	}
 
-	</style>
 
 
 	<div class="main">
 
 		<section id="wide-video-component">
     
+<!--dhara I need to be able to access this video #videoPlayer in JS to be able to resize it on the fly if it is too big for the screen size. I'm not sure how we are implementing JS in Sitecore but I DONT want the JS to effect other video pages, we may need to talk regarding code use for this video component to avoid inadvertent problems elsewhere on the site. -->
 
             <div class="video-container" >
-                <video id="videoPlayer" poster="http://business.hibu.co.uk/~/media/images/shared/case studies/suzie lee/suzieleevideo3.jpg" controls="" width="100%" height="100%" onclick="playPause()">
+                <video id="videoPlayer" poster="http://business.hibu.co.uk/~/media/images/shared/case studies/suzie lee/suzieleevideo3.jpg" controls="" width="100%" height="100%">
                     <!-- MP4 source must come first for iOS -->
                     <source type="video/mp4" src="http://business.hibu.co.uk/~/media/Videos/HibuUk/Knowledge Center/2014/May/Suzie Lee/SUZIELEEhibu120 mp4.mp4" />
                     <!-- WebM for Firefox 4 and Opera -->
@@ -37,44 +32,37 @@
             	</video>
             </div><!--end video-container-->
 
-        </section>
-
-    <!-- End of video container -->
+        </section><!--end wide-video-component-->
 
 
     <section class="main-case-study ">
-    	<div class="fleximg">
+    	
     	<div class="grid">
-            <div class="col-1-3">
+    		<div class="col-1-3 responsiveimg deskonly leftmostcol">
                 <img src="http://business.hibu.co.uk/~/media/images/shared/case studies/suzie lee/suzieleeperson.png" alt="/~/media/images/shared/case studies/suzie lee/suzieleeperson.png"/>
             </div><!--end col-1-3-->
-            <div class="col-1-3">
-                <h1>
-                    Case Study</h1>
-                <h2>
-                    Suzie Lee</h2>
-                
-                hibu have given me the confidence to carry on with my website. It looks beautiful and really reflects my products.
-                <div class="name">
-                    Suzie Lee</div>
+            <div class="col-1-3 middlecol">
+                <h1>Case Study</h1>
+                <h2>Suzie Lee</h2>
+                <p>hibu have given me the confidence to carry on with my website. It looks beautiful and really reflects my products.<p>
+                <p class="byline">Suzie Lee</p>
                 <p><a href="http://www.suziekaylee.com/" target="" class="cta"><span></span>Launch site</a></p>
             </div><!--end col-1-3-->
-            <div class="col-1-3 fleximg">
-                <figure class="right">
-                    <img class="" src="http://business.hibu.co.uk/~/media/images/shared/case studies/suzie lee/suzielee.jpg" alt="" />
-                    <span>suziekaylee.com</span>
-                </figure>
+            <div class="col-1-3 responsiveimg rightmostcol">       
+                <img src="http://business.hibu.co.uk/~/media/images/shared/case studies/suzie lee/suzielee.jpg" alt="" />
+                <p class="byline">suziekaylee.com</p>
             </div><!--end col-1-3-->
         </div><!--end grid-->
-    </div>
+
     </section><!--end main-case-study-->
-    <!-- End of main case study -->
+
 
 
 
 		
 	</div>	
 	<!--scripts start-->
+	<!--Assuming I'll be doing the JS in Visual Studio and will take the console.logs out when complete-->
 	<script>
 	console.log('SCRIPT RUNNING');
 	document.addEventListener('DOMContentLoaded', function() {

@@ -1,3 +1,4 @@
+
 // HELPERS
 
 //MIXINS
@@ -71,9 +72,10 @@
 }
 
 //responsive image
- %responsiveimg {
+ %responsiveimg, .responsiveimg img {
 	max-width:100%;
 }
+
 
 %fleximg, .fleximg img { // add this class to html to make all the images within the section responsive and centred
 	@extend %responsiveimg;
@@ -107,3 +109,9 @@
 	.deskonly{display:block;}
 }
 
+.largedeskonly {
+	display: none;
+	@include breakpoint(large) {
+		display: block;
+	}
+}

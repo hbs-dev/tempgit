@@ -76,6 +76,7 @@ $bigpad: 2.25rem; // 36px vertical padding - used to separate stacked grid rows 
   }
 }
 
+// nesting columns within columns - include the parent to unset the previous margins
 .nesting-parent {
   margin-left: -1.25rem !important;
   margin-right: -1.25rem !important;
@@ -108,5 +109,27 @@ $bigpad: 2.25rem; // 36px vertical padding - used to separate stacked grid rows 
   @include breakpoint(medium) {
     width: 33.3333%;
     float: left !important;
+  }
+}
+
+
+//drop from thirds to halves as long as you denote one column to be the hider
+.col-3-to-2 {
+  width: 100%;
+  @include breakpoint(medium) {
+    width: 50%;
+  }
+  @include breakpoint(large) {
+    width: 33.3333%;
+  }
+}
+.col-3-to-2-hider {
+  width: 100%;
+  @include breakpoint(medium) {
+    display: none;
+  }
+  @include breakpoint(large) {
+    display: block;
+    width: 33.3333%;
   }
 }
