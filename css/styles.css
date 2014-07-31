@@ -515,12 +515,12 @@ th {
 .nowrap, ul.social {
   white-space: nowrap; }
 
-.gallery .col-1-5 img, .legacy-details img, .nav2 .promo img, #split-header img, .center {
+.fleximg img, .gallery .col-1-5 img, .nav2 .promo img, #split-header img, .center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.gallery .col-1-5 img, .legacy-details img {
+.fleximg img, .gallery .col-1-5 img {
   max-width: 100%; }
 
 footer p.logo, footer h4.live-chat, #split-header img, .hide {
@@ -546,7 +546,7 @@ header ul, ul.list-posts {
 
   .deskonly {
     display: block; } }
-/* ==========================================================================
+	/* ==========================================================================
    typeography
    ========================================================================== */
 *, *:after, *:before {
@@ -639,7 +639,7 @@ a, a:visited {
 @media (min-width: 640px) {
   h1, .h1 {
     font-size: 2.5rem;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     h1 + p.byline, .h1 + p.byline {
       font-size: 80%; }
@@ -958,6 +958,8 @@ button {
   border: 1px solid #000 !important;
   text-align: left;
   display: inline-block !important; }
+  button:focus {
+    outline: 0; }
   button:after {
     font-family: icons;
     content: "\e609";
@@ -1058,11 +1060,12 @@ fieldset {
   background-color: #f9f9f9;
   border: 0;
   margin-bottom: 1.5rem;
-  padding: 1.5rem; }
+  padding: 1.5rem 1.25rem; }
   fieldset .error-msg {
     color: #c91414;
-    font-size: 80%;
-    display: none; }
+    font-size: 70%;
+    visibility: hidden;
+    margin-left: 15.5rem; }
   fieldset .req {
     color: #c91414;
     text-align: right; }
@@ -1071,39 +1074,23 @@ fieldset {
     color: #c91414; }
   fieldset label {
     font-size: 0.75rem;
-    line-height: 1;
+    line-height: 2;
     margin-bottom: 0;
-    width: 100%;
+    width: 23%;
     font-family: os600;
-    color: #333333; }
+    color: #333333;
+    text-align: right;
+    padding-right: 1.25rem;
+    display: inline-block; }
     fieldset label.required:after {
       content: " *";
       color: #c91414; }
-    @media (min-width: 768px) {
-      fieldset label {
-        float: left;
-        width: 25%;
-        text-align: right;
-        padding-right: 1.25rem; } }
-  @media (min-width: 768px) {
-    fieldset .w25 label {
-      width: 80%; } }
   fieldset div {
-    width: 100%;
-    margin-bottom: 0.75rem;
+    display: block;
+    margin-bottom: 1.5rem;
     overflow: hidden; }
-    fieldset div.w25 {
-      width: 25%; }
-    fieldset div div {
-      width: 100%; }
-    @media (min-width: 768px) {
-      fieldset div {
-        float: left; }
-        fieldset div div {
-          width: 50%; } }
-  @media (min-width: 768px) {
-    fieldset button {
-      margin-left: 25%; } }
+  fieldset button {
+    margin-left: 15.5rem; }
 
 input[type="text"], input[type="tel"], input[type="password"], input[type="email"], input[type="url"], textarea, select {
   outline: none;
@@ -1111,22 +1098,17 @@ input[type="text"], input[type="tel"], input[type="password"], input[type="email
   padding: 3px !important;
   color: #333333;
   background-color: #fff;
-  width: 100%;
+  width: 50%;
   font-size: .75rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  vertical-align: top; }
   input[type="text"]:focus, input[type="tel"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
     border: 1px solid #333333; }
-  @media (min-width: 768px) {
-    input[type="text"], input[type="tel"], input[type="password"], input[type="email"], input[type="url"], textarea, select {
-      width: 100%; } }
 
 input[type="checkbox"], input[type="radio"] {
   font-size: .75rem;
   vertical-align: middle;
   margin-left: 1px; }
-  @media (min-width: 768px) {
-    input[type="checkbox"], input[type="radio"] {
-      vertical-align: top; } }
 
 table {
   border-collapse: collapse; }
@@ -1138,19 +1120,27 @@ table {
     font-size: .9375rem; }
 
 .actionbar {
-  background: #fed900; }
+  background: #fed900;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem; }
+  @media (min-width: 768px) {
+    .actionbar {
+      margin-left: 0;
+      margin-right: 0; } }
   .actionbar p {
     color: #333333;
     margin-bottom: 0; }
   .actionbar h2, .actionbar .h2 {
     font-size: 1.5rem;
     line-height: 1.5;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0; }
     @media (min-width: 768px) {
       .actionbar h2, .actionbar .h2 {
         font-size: 1.75rem;
         line-height: 1.28571;
-        margin-bottom: 0.75rem; } }
+        margin-bottom: 0; } }
+  .actionbar h2 + p, .actionbar .h2 + p {
+    margin-top: .75rem; }
 
 #split-header {
   background-color: #f9f9f9;
@@ -1207,6 +1197,31 @@ ul.list-posts li {
       margin-bottom: .75rem; }
     .half-testimonial div a {
       color: #fff !important; }
+
+.full-testimonial {
+  background: white url("../images/website-packages/suzi-full.jpg") no-repeat 30% -20%;
+  height: 500px;
+  position: relative; }
+  @media (min-width: 768px) {
+    .full-testimonial {
+      background-position: center;
+      height: 350px; } }
+  .full-testimonial .ft-words {
+    background-color: #3399cc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.125rem; }
+    .full-testimonial .ft-words p {
+      color: #fff; }
+    @media (min-width: 768px) {
+      .full-testimonial .ft-words {
+        position: relative;
+        background-color: transparent;
+        margin: 1rem 0 0 40%; } }
+    @media (min-width: 960px) {
+      .full-testimonial .ft-words {
+        margin: 2rem 0 0 40%; } }
 
 #full-header {
   padding-top: 4rem;
@@ -1573,6 +1588,8 @@ ul.kbmenu {
       text-align: center; } }
 .showcase .devices {
   clear: both; }
+  .showcase .devices + p {
+    margin-bottom: 0; }
 
 .gallery .col-1-5 {
   width: 50%;
@@ -1614,6 +1631,11 @@ ul.kbmenu {
   .faq h1 {
     font-size: 3rem;
     line-height: 1; }
+  .faq p {
+    margin-top: -1.5rem; }
+    @media (min-width: 768px) {
+      .faq p {
+        margin-top: 0; } }
 
 #home-hero {
   padding-top: 1rem;
