@@ -27,7 +27,10 @@ header {
     }
   }
   .nav2ad {
-    display:none;
+   display:none;
+   //position:fixed;
+   //bottom:1rem;
+   //@extend %center;
   }
 
   @include breakpoint(medium) {
@@ -194,7 +197,7 @@ color:#FFFFFF;}
   z-index:9998;
   display:none;
   &.show {
-  display:block;
+    display:block;
   }
 
   #mainmenu, #submenu {
@@ -297,16 +300,20 @@ color:#FFFFFF;}
   }
 }
 // CHEVRONS ON MAIN MENU ITEMS
-#mainmenu .nav2 li.top-level span:after {
-  color:$mid-grey;
-  float:right;
-  font-family:"icons";
-  content: "\e609";
-  font-size: 22px;
-  position:relative;
-  top:-6px;
-}
-//BACK MENU ITEM 
+#mainmenu .nav2 li.top-level:last-of-type{border-bottom:0;margin-top:1rem;}
+#mainmenu .nav2 li.top-level span{
+    color:$dark-grey;
+    &:after {
+    color:$mid-grey;
+    float:right;
+    font-family:"icons";
+    content: "\e609";
+    font-size: 22px;
+    position:relative;
+    top:-6px;
+    right:-6px;
+  }
+} //BACK MENU ITEM 
 #submenu .subnavul li.back {
   cursor: default;
   padding-left:5px;
@@ -392,13 +399,13 @@ color:#FFFFFF;}
    // &.hover1 { 
       background:$blue-link;
     }
+    &.mobonly{display:none;}
     span {
       color:$blue-link;
       padding: .8125rem;
       display:block;
       @include breakpoint(medium){
           padding:.9375rem;
-
       }
     }
     &:hover span {
@@ -407,16 +414,18 @@ color:#FFFFFF;}
     }
 
  li:hover>.level2 {
-  //li.hover1>.level2 {
+ //li.hover1>.level2 {
+   @include breakpoint(medium){  
     display:block;
     background:#fff;
     position:absolute;
-     top:43px;
-     border-top:5px solid #3399CC;
-     width:30rem;
-     overflow:hidden;
-     padding:1rem 0;
-     -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+    top:43px;
+    border-top:5px solid #3399CC;
+    width:30rem;
+    overflow:hidden;
+    padding:1rem 0;
+    -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+    }
   }
 .subnavul{
   display:none;
@@ -448,7 +457,7 @@ color:#FFFFFF;}
 }
 
 //second nav promo image
-  .promo {
+ .promo {
     width: 100%;
     display:none;
     position:relative;
@@ -461,8 +470,8 @@ color:#FFFFFF;}
       max-width:100%;
     }
     @include breakpoint(medium) {
-    display:block;
-  }
+      display:block;
+    }
   }
 }
 
