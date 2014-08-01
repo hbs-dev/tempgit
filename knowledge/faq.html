@@ -13,48 +13,136 @@
 	<!--header start-->
 	<header></header>
 	<style>
-	.hidden .answer {display: none;}
-	.hidden .content {display: none;}
+	.hidden dl {display: none;}
+	dt.hidden+dd {display: none;}
+	.hidechildren.hidden dt, .hidechildren.hidden dd {display: none;}
+
 	.show .answer {display: block;}
+	.answer{background-color: #ddd; max-height:200px;}
+	.clickablequestion{padding:0 1rem; background-color: #ff1; width: 100%;}
+	.clickablequestion span {float:right;}
+	dl:hover {cursor: pointer;}
+	dd:hover {cursor: default;}
+	dl span.found-count {padding-left: 1rem;}
+	dl span.more {float:right;}
 	</style>
 	<!--header end-->
 	<!--main start-->
-	<section class="unresponsiveoverlay"><p>For the best possible experience we recommend viewing this section of the site on a desktop or laptop computer.</p></section>
+
 	<div class="main knowledge">
-		<div id="top1" class="expandable toplevel hidden" onclick="switchstates(this);">
-			<h1>This is the top level</h1>
-			<div class="content" style="background-color:#555;">
-			<div id="a1" class="expandable hidden" onclick="switchstates(this);">
-				<h1>Hello this is question 1</h1>
-				<div class="answer">
-					blah blah this is the answer
-				</div>
-			</div>
-			<div id="a2"  class="expandable hidden" onclick="switchstates(this);">
-				<h1>Hello this is question 2</h1>
-				<div class="answer">
-					blah blah this is the answer
-				</div>
-			</div>
-			<div id="a3"  class="expandable hidden" onclick="switchstates(this);">
-				<h1>Hello this is question 3</h1>
-				<div class="answer">
-					blah blah this is the answer
-				</div>
-			</div>
-		</div>
-		</div>
+		<section class="expandng-faq grid">
+
+			<div class="col-1-1 toplevel">
+				<h1 class="clickablebanner">Products  - This is the top level</h1>
+
+					
+					<dl  class="expandable hidechildren hidden"><h2>Display Advertising<span class="found-count">(16 questions)</span><span class="more open">+</span></h2>
+						<dt class="expandable clickablequestion hidden">Hello this is question 1<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer1
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is question 2<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer2
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is question 3<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer3
+							</dd>
+						</dt>
+					</dl>
+
+
+					<dl class="expandable hidechildren hidden"><h2>eShops<span class="found-count">(22 questions)</span><span class="more open">+</span></h2>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 1<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer1
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 2<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer2
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 3<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer3
+							</dd>
+						</dt>
+					</dl>
+				<!--</div><!--end content-->
+			</div><!--end expandable toplevel hidden-->
+
+
+			<div class="toplevel col-1-1">
+				<h1 class="clickablebanner">General - This is also a top level</h1>
+				<!--<div id="grouped1" class="content" style="background-color:#eee;">-->
+					
+					<dl class="expandable hidechildren hidden"><h2>Display Advertising<span class="found-count">(8 questions)</span><span class="more open">+</span></h2>
+						<dt class="expandable clickablequestion hidden">Hello this is question 1<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer1
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is question 2<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer2
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is question 3<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer3
+							</dd>
+						</dt>
+					</dl>
+
+
+					<dl class="expandable hidechildren hidden"><h2>eShops<span class="found-count">(3 questions)</span><span class="more open">+</span></h2>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 1<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer1
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 2<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer2
+							</dd>
+						</dt>
+						<dt class="expandable clickablequestion hidden">Hello this is Equestion 3<span class="more">+</span></dt>
+							<dd class="answer">
+								blah blah this is the answer3
+							</dd>
+						</dt>
+					</dl>
+				<!--</div><!--end content-->
+			</div><!--end expandable toplevel hidden-->
+		</section><!--end faq-->
 	</div><!--end main knowledge-->
 	<!--footer end-->
 	<!--scripts start-->
 	<script>
-	function switchstates(e) {
-		console.log("switchstates running");
-		console.log(e.className);
-		console.log(e.id);
-		document.querySelector('#'+e.id).classList.toggle('hidden');
-		window.event.stopPropagation();
-	}
+	document.addEventListener('DOMContentLoaded', function() {
+
+		var expandableList = document.querySelectorAll('.expandable');
+
+		for (i=0;i<expandableList.length;i++) {
+			expandableList[i].addEventListener('click', function() {
+				this.classList.toggle('hidden'); 
+				window.event.stopPropagation();
+			});
+		};
+
+		var answerDDList = document.querySelectorAll('.answer');
+
+		for (i=0;i<answerDDList.length;i++) {
+			answerDDList[i].addEventListener('click', function() {
+				window.event.stopPropagation();
+			});
+		};
+	});	
+
 	</script>
 	<!--scripts end-->
 </body>
