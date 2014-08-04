@@ -10,14 +10,13 @@ header {
   z-index:9999;
   border-bottom:1px solid #ccc;
   background-color:#fff;
-
   ul{
-   @extend %nudelist
+    @extend %nudelist
   }
   a{
     text-decoration:none;
   }
-   h1 {//logo
+  h1 {//logo
     margin:0.6875rem;
     float:left;
     font-size:0;
@@ -25,31 +24,25 @@ header {
           width:78px;
           height:28px;
     }
-  }
-//  .nav2ad {
-//   display:none;
- // }
-
-  @include breakpoint(medium) {
-      height:8.3rem; 
-    
-    h1 {//logo
+    @include breakpoint(medium) {
       margin:0 1.25rem .75rem 0;
-      float:left;
       img {
           width:108px;
           height:37px;
       }
     }
+    @include breakpoint(large) {
+      margin:0 1.25rem 0 0;
+    }
+  }
+  @include breakpoint(medium) {
+    height:8.3rem; 
     #mobile-menu-icon, #mobile-search-icon {
       display:none;
     }
   }
   @include breakpoint(large) {
       height:5.85rem; 
-      h1 {//logo
-        margin:0 1.25rem 0 0;
-      }
   }
 }
 
@@ -95,18 +88,28 @@ header {
     float:left;
     position:relative;
     cursor:default;
-    &:hover .level2{display:block;
-    background:#fff;
-    position:absolute;
-    top:1;right:0;padding:1.785714285714286em;border-top:5px solid $blue-link;width:325px;
--webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
-color:#FFFFFF;}
-     &:hover.contact .level2 {width:230px;}
-}
+    &:hover .level2{
+      display:block;
+      background:#fff;
+      position:absolute;
+      top:1;
+      right:0;
+      padding:1.785714285714286em;
+      border-top:5px solid $blue-link;
+      width:325px;
+      webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+      color:#FFF;
+    }
+    &:hover.contact .level2 {
+      width:230px;
+    }
+  }
   &>li:hover{
     background:$blue-link;
     &>span:first-child{
-      border-right:1px solid $mid-grey;color:#fff;}
+      border-right:1px solid $mid-grey;
+      color:#fff;
+    }
   }
   &>li>span:first-child{
     color:$dark-grey;
@@ -130,29 +133,33 @@ color:#FFFFFF;}
     }
   }
 }
-
-//yellow bar nav icons
-/*.search>span:before,.contact>span:before,.account>span:before,.myaccount>span:before {
+.search input[type="text"]{
+  font-size:.9375rem;
+  padding: .375rem .625rem !important;
+  margin-bottom: .75rem;
+}
+.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before{
   font-family:"icons";
-  font-size:1.46666666666667rem;
-  line-height:0;
+  font-size:1.5rem;
   padding-right:5px;
   position:relative;
-  bottom:-4px;
+  bottom:-6px;
 }
-.search>span:before{content: "\e613";}
-.contact>span:before {content: "\e614";}
-.account>span:before,.myaccount>span:before {content: "\e615";font-size:1.28571428571429rem;bottom:-3px;}*/
-.search input[type="text"]{font-size:.9375rem;padding: .375rem .625rem !important;margin-bottom: .75rem;}
-.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before{font-family:"icons";font-size:1.5rem;padding-right:5px;position:relative;bottom:-6px;}
-.contact .livechat a:before{content: "\e617";}
-.contact .call24 a:before{content: "\e618";}
-.contact .message a:before{content: "\e619";}
+.contact .livechat a:before{
+  content: "\e617";
+}
+.contact .call24 a:before{
+  content: "\e618";
+}
+.contact .message a:before{
+  content: "\e619";
+}
 //yellow bar nav end
 
 
 //mobile menu animations start
-%menuanimate {-webkit-transform: translate3d(0, 0, 0);
+%menuanimate {
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .mainmenuslideleft {
   @extend %menuanimate;
