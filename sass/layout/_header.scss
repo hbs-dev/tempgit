@@ -10,14 +10,13 @@ header {
   z-index:9999;
   border-bottom:1px solid #ccc;
   background-color:#fff;
-
   ul{
-   @extend %nudelist
+    @extend %nudelist
   }
   a{
     text-decoration:none;
   }
-   h1 {//logo
+  h1 {//logo
     margin:0.6875rem;
     float:left;
     font-size:0;
@@ -25,39 +24,25 @@ header {
           width:78px;
           height:28px;
     }
-  }
-  .nav2ad {
-   display:none;
-   //position:fixed;
-   //bottom:1rem;
-   //@extend %center;
-  }
-
-  @include breakpoint(medium) {
-      height:8.3rem; 
-    .nav2ad {
-      position:relative;
-      bottom:-5px;
-      float:right;
-      display:block;
-    }
-    h1 {//logo
+    @include breakpoint(medium) {
       margin:0 1.25rem .75rem 0;
-      float:left;
       img {
           width:108px;
           height:37px;
       }
     }
+    @include breakpoint(large) {
+      margin:0 1.25rem 0 0;
+    }
+  }
+  @include breakpoint(medium) {
+    height:8.3rem; 
     #mobile-menu-icon, #mobile-search-icon {
       display:none;
     }
   }
   @include breakpoint(large) {
       height:5.85rem; 
-      h1 {//logo
-        margin:0 1.25rem 0 0;
-      }
   }
 }
 
@@ -103,18 +88,28 @@ header {
     float:left;
     position:relative;
     cursor:default;
-    &:hover .level2{display:block;
-    background:#fff;
-    position:absolute;
-    top:1;right:0;padding:1.785714285714286em;border-top:5px solid #3399CC;width:325px;
--webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
-color:#FFFFFF;}
-     &:hover.contact .level2 {width:230px;}
-}
+    &:hover .level2{
+      display:block;
+      background:#fff;
+      position:absolute;
+      top:1;
+      right:0;
+      padding:1.785714285714286em;
+      border-top:5px solid $blue-link;
+      width:325px;
+      webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+      color:#FFF;
+    }
+    &:hover.contact .level2 {
+      width:230px;
+    }
+  }
   &>li:hover{
     background:$blue-link;
     &>span:first-child{
-      border-right:1px solid $mid-grey;color:#fff;}
+      border-right:1px solid $mid-grey;
+      color:#fff;
+    }
   }
   &>li>span:first-child{
     color:$dark-grey;
@@ -138,29 +133,33 @@ color:#FFFFFF;}
     }
   }
 }
-
-//yellow bar nav icons
-/*.search>span:before,.contact>span:before,.account>span:before,.myaccount>span:before {
+.search input[type="text"]{
+  font-size:.9375rem;
+  padding: .375rem .625rem !important;
+  margin-bottom: .75rem;
+}
+.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before{
   font-family:"icons";
-  font-size:1.46666666666667rem;
-  line-height:0;
+  font-size:1.5rem;
   padding-right:5px;
   position:relative;
-  bottom:-4px;
+  bottom:-6px;
 }
-.search>span:before{content: "\e613";}
-.contact>span:before {content: "\e614";}
-.account>span:before,.myaccount>span:before {content: "\e615";font-size:1.28571428571429rem;bottom:-3px;}*/
-.search input[type="text"]{font-size:.9375rem;padding: .375rem .625rem !important;margin-bottom: .75rem;}
-.contact .livechat a:before,.contact .call24 a:before,.contact .message a:before{font-family:"icons";font-size:1.5rem;padding-right:5px;position:relative;bottom:-6px;}
-.contact .livechat a:before{content: "\e617";}
-.contact .call24 a:before{content: "\e618";}
-.contact .message a:before{content: "\e619";}
+.contact .livechat a:before{
+  content: "\e617";
+}
+.contact .call24 a:before{
+  content: "\e618";
+}
+.contact .message a:before{
+  content: "\e619";
+}
 //yellow bar nav end
 
 
 //mobile menu animations start
-%menuanimate {-webkit-transform: translate3d(0, 0, 0);
+%menuanimate {
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .mainmenuslideleft {
   @extend %menuanimate;
@@ -208,7 +207,7 @@ color:#FFFFFF;}
     bottom:0;
     width:50%;
     max-height:100%;
-    background: $yellow;
+    background: $bg-grey; //container background
     transition:left 0.2s linear;
     -webkit-transform: translate3d(0, 0, 0);
     ul{
@@ -275,6 +274,9 @@ color:#FFFFFF;}
       content:"" !important;
     }
   }
+   @include breakpoint(medium) {
+    display:none;
+   }
 }
 //mobile search end
 
@@ -287,12 +289,30 @@ color:#FFFFFF;}
   background:$yellow;
   color:$dark-grey;
   border-bottom: 1px $light-grey solid;
+  &.nav2ad {
+    background-color:transparent;
+      position:relative;
+    display:block;
+  } 
 }
 #submenu .subnavul li {
   padding:10px 0 10px 10px;
   span.navtagline{
     display:none;
   }
+  &.promo {
+    width: 100%;
+    position:relative;
+    background:$bg-grey;
+    margin-bottom:-1rem;
+    border-bottom:0;
+    height:auto;
+    img{
+      @extend %center;
+      max-width:100%;
+    }
+  }
+  
   a {
   text-decoration: none;
   color:$dark-grey !important;
@@ -304,7 +324,7 @@ color:#FFFFFF;}
 #mainmenu .nav2 li.top-level span{
     color:$dark-grey;
     &:after {
-    color:$mid-grey;
+    color:#fff;
     float:right;
     font-family:"icons";
     content: "\e609";
@@ -320,7 +340,7 @@ color:#FFFFFF;}
   &:before {
     font-family:"icons";
     content: "\e60b";
-    color:$mid-grey;
+    color:#fff;
     font-size: 22px;
     position:relative;
     float:left;
@@ -378,10 +398,11 @@ color:#FFFFFF;}
  // display:none;
   font-size:0;
     @include breakpoint(medium) {
-      float:left;
+     // float:left;
       display:block;
       clear:both;
       padding-top:0;
+      width:100%;
     }  
     @include breakpoint(large) {
       clear:none;
@@ -395,11 +416,16 @@ color:#FFFFFF;}
     font-size:.8125rem;
     line-height: 1;
     font-weight:400;
-    &:hover{
-   // &.hover1 { 
-      background:$blue-link;
+    &.hover1 { 
+    //&:hover{
+     background:$blue-link;
     }
-    &.mobonly{display:none;}
+    &.nav2ad {
+      position:absolute;
+      top:0;
+      right:0;
+     // display:block;
+    }
     span {
       color:$blue-link;
       padding: .8125rem;
@@ -413,14 +439,14 @@ color:#FFFFFF;}
       }
     }
 
- li:hover>.level2 {
- //li.hover1>.level2 {
+ //li:hover>.level2 {
+ li.hover1>.level2 {
    @include breakpoint(medium){  
     display:block;
     background:#fff;
     position:absolute;
     top:43px;
-    border-top:5px solid #3399CC;
+    border-top:5px solid $blue-link;
     width:30rem;
     overflow:hidden;
     padding:1rem 0;
@@ -435,7 +461,6 @@ color:#FFFFFF;}
     float:left;
     overflow:hidden;
     display:block;
-   
     padding: .75rem 1.25rem;
     text-transform:none;
     font-size:.9375rem;
@@ -450,29 +475,24 @@ color:#FFFFFF;}
     &:hover{
       background:none;
     }
-   }  
+  &.promo { 
+  width: 100%;
+    display:block;
+    position:relative;
+   background:$bg-grey;
+    margin-top:.75rem;
+  margin-bottom:-1rem;
+   img{
+      @extend %center;
+     max-width:100%;
+   }
+    }
+  }  
   @include breakpoint(medium) {
     display:block;
   }
 }
 
-//second nav promo image
- .promo {
-    width: 100%;
-    display:none;
-    position:relative;
-    background:$bg-grey;
-    padding:.75rem 1.125rem;
-    margin-top:.75rem;
-    margin-bottom:-1rem;
-    img{
-      @extend %center;
-      max-width:100%;
-    }
-    @include breakpoint(medium) {
-      display:block;
-    }
-  }
 }
 
 
