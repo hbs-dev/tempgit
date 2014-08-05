@@ -421,6 +421,7 @@ header {
     //&.hover1 { 
     &:hover{
      background:$blue-link;
+     cursor:default;
     }
     &.nav2ad:hover{background:none}
     &.nav2ad {
