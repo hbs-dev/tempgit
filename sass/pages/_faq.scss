@@ -1,0 +1,79 @@
+.hidden dl {
+    display: none;
+}
+
+	.more:after {
+		font-family: "icons";
+    	float: right;
+    	content: "\e60a";
+	}
+
+	.hidden .more:after {
+	    	content: "\e609";
+	    }
+
+dt.hidden + dd {
+    display: none;
+}
+
+.hidechildren.hidden dt, .hidechildren.hidden dd {
+    display: none;
+}
+
+.show .answer {
+    display: block;
+}
+
+.answer {
+	ul {
+		float:none !important;
+	}
+   
+}
+
+.clickablequestion {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+	span {
+    	float: right;
+    }
+}
+
+.toplevel {
+	padding-top: 3rem;
+	border-bottom: 1px solid #d7d7d7;
+}
+
+dl {
+	padding-top: 1rem;
+	border-top: 1px solid #d7d7d7;
+
+	&:hover {
+	    cursor: pointer;
+	}
+
+
+	span {
+		.found-count {
+	    	padding-left: 1rem;
+		}
+
+	h2 {
+	margin-bottom: 0;
+	padding-bottom: 1.5rem;
+	}	
+	}
+}
+dt {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+dd {
+	padding-bottom: 2rem;
+	padding-left: 0;
+	padding-right: 4rem;
+}
+dd:hover {
+    cursor: default;
+}
