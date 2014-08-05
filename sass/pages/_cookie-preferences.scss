@@ -1,0 +1,63 @@
+.cookie-prefs fieldset {
+	h3 {
+		margin-bottom:0;
+		clear:both;
+	} 
+	p {
+		margin-right: 5rem;
+		&.cookiebtn {
+			margin-right: 0;
+			overflow:hidden;
+		}
+		a#cookie-save {
+			float:right;
+			width:100%;
+			@include breakpoint(medium) {
+		 	width:auto;
+		 }
+		} 
+		&.success-msg{
+			background-color:$pri-green;
+			text-align:center;
+			color:#fff;
+			font-size: 1.5rem;
+			padding: .75rem;
+			margin-right:0;
+			line-height:1;
+		}
+		@include breakpoint(medium) {
+		 	margin-right: 10rem;
+		 }
+	}
+	div {float:right;	
+	}
+	label{
+		width:4rem;
+		font-size: 1.5rem;
+		color:#fff;
+		line-height:1;
+		padding:5px;
+		text-align:center;
+		background-color:$light-grey;
+		input[type="checkbox"]{
+			clear:both;
+			display:block;
+			margin:5px auto;
+			font-size: 2rem;
+		}
+		&.active{
+			background-color:$blue-link;
+		}
+	 	@include breakpoint(medium) {
+		 	width: 8rem;
+		 	input[type="checkbox"]{
+		 		clear:none;
+				display:inline;
+				margin:5px auto;
+				font-size: 2rem;
+			}
+		 }
+	}
+
+
+}	
