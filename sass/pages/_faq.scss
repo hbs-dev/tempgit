@@ -3,13 +3,21 @@
 }
 
 	.more:after {
-		font-family: "icons";
-    	float: right;
-    	content: "\e60a";
+		display: none;
+		@include breakpoint(small) {
+			display: block;
+			font-family: "icons";
+	    	float: right;
+	    	content: "\e60a";
+    	}
 	}
 
 	.hidden .more:after {
-	    	content: "\e609";
+			display: none;
+			@include breakpoint(small) {
+				display: block;
+		    	content: "\e609";
+	    	}
 	    }
 
 dt.hidden + dd {
@@ -32,11 +40,13 @@ dt.hidden + dd {
 }
 
 .clickablequestion {
-    padding: 0 1rem;
-    padding-bottom: 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
 	span {
     	float: right;
+    }
+    &:hover{
+    	background:$bg-grey;
     }
 }
 
@@ -58,11 +68,14 @@ dl {
 		.found-count {
 	    	padding-left: 1rem;
 		}
-
+		}
 	h2 {
-	margin-bottom: 0;
-	padding-bottom: 1.5rem;
-	}	
+		padding: 1rem;
+		margin-bottom: 0;
+		padding-bottom: 1rem;	
+		&:hover {
+			background:$bg-grey;
+		}
 	}
 }
 dt {
@@ -70,9 +83,12 @@ dt {
 	padding-bottom: 1rem;
 }
 dd {
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
 	padding-left: 0;
-	padding-right: 4rem;
+	padding-right: 1rem;
+	@include breakpoint(small){
+		padding-right: 4rem;
+	}
 }
 dd:hover {
     cursor: default;
