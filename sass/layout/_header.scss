@@ -97,7 +97,7 @@ header {
       padding:1.785714285714286em;
       border-top:5px solid $blue-link;
       width:325px;
-      webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+      box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
       color:#FFF;
     }
     &:hover.contact .level2 {
@@ -289,12 +289,14 @@ header {
   background:$yellow;
   color:$dark-grey;
   border-bottom: 1px $light-grey solid;
-  &.nav2ad {
-    background-color:transparent;
-      position:relative;
-    display:block;
-  } 
+  
 }
+#mainmenu .nav2 li.nav2ad {
+    background-color:transparent;
+    position:relative;
+    display:block;
+    
+  } 
 #submenu .subnavul li {
   padding:10px 0 10px 10px;
   span.navtagline{
@@ -416,10 +418,11 @@ header {
     font-size:.8125rem;
     line-height: 1;
     font-weight:400;
-    &.hover1 { 
-    //&:hover{
+    //&.hover1 { 
+    &:hover{
      background:$blue-link;
     }
+    &.nav2ad:hover{background:none}
     &.nav2ad {
       position:absolute;
       top:0;
@@ -439,8 +442,8 @@ header {
       }
     }
 
- //li:hover>.level2 {
- li.hover1>.level2 {
+ li:hover>.level2 {
+ //li.hover1>.level2 {
    @include breakpoint(medium){  
     display:block;
     background:#fff;
@@ -450,7 +453,7 @@ header {
     width:30rem;
     overflow:hidden;
     padding:1rem 0;
-    -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.3);
     }
   }
 .subnavul{
