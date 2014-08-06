@@ -22,14 +22,14 @@ header {
     font-size:0;
 
     img {
-          width:78px;
+          width:72px;
           height:28px;
     }
     @include breakpoint(medium) {
       margin:0 1.25rem .75rem 0;
       img {
-          width:108px;
-          height:37px;
+          width:129px;
+          height:50px;
       }
     }
     @include breakpoint(large) {
