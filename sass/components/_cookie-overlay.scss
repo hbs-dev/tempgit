@@ -1,0 +1,34 @@
+/*------------------------------------*\
+        Cookie Overlay
+\*------------------------------------*/
+    #cookie-overlay {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.9);
+        color: #FFF;
+        text-align: center;
+        transition: opacity 1s linear;
+        opacity: 0;
+        z-index: 30000;
+    }
+
+        #cookie-overlay.invisible {
+            opacity: 0;
+        }
+
+        #cookie-overlay.visible {
+            opacity: 1;
+        }
+
+        #cookie-overlay.hidden {
+            display: none;
+        }
+
+        #cookie-overlay p {
+            color: white;
+            font-size: 1rem;
+        }
