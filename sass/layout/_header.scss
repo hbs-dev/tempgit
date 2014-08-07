@@ -26,7 +26,7 @@ header {
           height:28px;
     }
     @include breakpoint(medium) {
-      margin:0 1.25rem .75rem 0;
+      margin:0 1.25rem 1rem 0;
       img {
           width:129px;
           height:50px;
@@ -36,14 +36,22 @@ header {
       margin:0 1.25rem 0 0;
     }
   }
+
+ >.inner{
+   @include breakpoint(medium) {
+        padding-top:1rem;
+
+   }
+  }
+
   @include breakpoint(medium) {
-    height:8.3rem; 
+    height:9.3125rem; 
     #mobile-menu-icon, #mobile-search-icon {
       display:none;
     }
   }
   @include breakpoint(large) {
-      height:5.85rem; 
+      height:6.625rem; 
   }
 }
 
@@ -61,15 +69,18 @@ header {
 //yellow bar nav start
 .bar1{
   display:none;
-  margin-bottom: .75rem;
   background:$yellow;
   position:relative;
   line-height:1.5;
+  padding:2px 0;
   p.support{
     float:left;
     margin-bottom:0;
+        font-size:.8125rem;
+
     a {
       color:$dark-grey !important;
+      &:hover{color:$blue-link !important;}
     }
   }
   .level2 {
@@ -84,12 +95,15 @@ header {
 
 .nav1 {
   float:right;
-  li {
+     font-size:.8125rem;
+ li {
     display:inline;
     float:left;
     position:relative;
     cursor:default;
     &:hover .level2{
+          font-size:.9375rem;
+
       display:block;
       background:#fff;
       position:absolute;
@@ -228,6 +242,7 @@ header {
 
 //mobile search start
 #mobile-search {
+  display:none;
   position:fixed;
   top:-50%;
   left:0;
@@ -296,6 +311,7 @@ header {
     background-color:transparent;
     position:relative;
     display:block;
+    @extend %txtc;
     
   } 
 #submenu .subnavul li {
@@ -351,7 +367,7 @@ header {
   }
 }
 /* MOBILE ICONS */
-#mobile-search-icon, #mobile-menu-icon {
+ #mobile-menu-icon {
   position:relative;
   float:right;
   top:4px;
@@ -365,20 +381,23 @@ header {
     white-space: nowrap;
     overflow: hidden; 
   }
+  &:before {
+    font-family:"icons";
+    content: "\e61c";
+    color:$light-grey;
+    font-size:28px;
+  }
 }
-#mobile-search-icon:before {
-  font-family:"icons";
-  content: "\e613";
-  font-size: 28px;
-  color:$light-grey;
+#mobile-search-icon {
+  display:none;
+  &:before {
+    font-family:"icons";
+    content: "\e613";
+    font-size: 28px;
+    color:$light-grey;
+  }
 }
 
-#mobile-menu-icon:before {
-  font-family:"icons";
-  content: "\e61c";
-  color:$light-grey;
-  font-size:28px;
-}
 //mobile styling end
 
 
@@ -390,7 +409,7 @@ header {
 //white main nav bar 
 .bar2 {
   position:relative;
-  margin-left:108px;//must match the logo width
+  margin-left:149px;//must match the logo width
   .level2 {
     z-index:2;
     display:none;
@@ -407,11 +426,13 @@ header {
       clear:both;
       padding-top:0;
       width:100%;
+      margin-left:-149px;
+
 
     }  
     @include breakpoint(large) {
       clear:none;
-      padding-top:10px;
+     padding-top:20px;
     }
 
   li {
@@ -421,15 +442,15 @@ header {
     font-size:.8125rem;
     line-height: 1;
     font-weight:400;
-    //&.hover1 { 
-    &:hover{
+    &.hover1 { 
+    //&:hover{
      background:$blue-link;
      cursor:default;
     }
     &.nav2ad:hover{background:none}
     &.nav2ad {
       position:absolute;
-      top:0;
+      top:.8125rem;
       right:0;
      // display:block;
     }

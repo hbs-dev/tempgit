@@ -2,10 +2,10 @@
 
 margin-top: 3.125rem; //50px
 @include breakpoint(medium) {
-	margin-top:8.3rem;
+	margin-top:9.3125rem; //149px total of bar1 and bar 2
 }
 @include breakpoint(large) {
-	margin-top:5.85rem;
+	margin-top:6.625rem; //106px - total of bar1 and bar 2
 }
 
 }
