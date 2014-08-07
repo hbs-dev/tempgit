@@ -102,8 +102,7 @@ header {
     position:relative;
     cursor:default;
     &:hover .level2{
-          font-size:.9375rem;
-
+      font-size:.9375rem;
       display:block;
       background:#fff;
       position:absolute;
@@ -433,6 +432,8 @@ header {
     @include breakpoint(large) {
       clear:none;
      padding-top:20px;
+       margin-left:0;
+
     }
 
   li {
